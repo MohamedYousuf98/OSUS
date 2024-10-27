@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSUS</title>
+    <meta name="description" content="Welcome to our website. We offer a variety of useful and interesting content across different topics. Enjoy a rich and informative browsing experience.">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Slick Slider JS -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <!-- Custom Script -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-Sy4T3FZT63M5ac+4e4vG1mf8aKOVbIQ6E+0BJoO+IR+JP4PzS6zMprZX51jItNHRq5c7QW8B9yWHD8MwVGmVYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="scrollCue.css">
+
+</head>
+
+<body>
+
+  <div class="custom-cursor"></div>
+  
+ 
+
+        <nav class="navbar bg-transparent pt-3 pb-3">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/logo.png" alt="Logo">
+                    </a>
+            
+                    <!-- Globe icon and menu button aligned next to each other on one line -->
+                    <ul class="navbar-nav d-flex flex-row align-items-center">
+                           <!-- Menu button -->
+                           <li class="nav-item">
+                                <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
+                                    <i class="fas fa-bars mr-2 "></i> 
+                                <span style="font-weight: 600; margin-left: 10px;">Menu</span>
+                            </button>
+                        </li>
+
+                        <!-- Globe icon -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#"><i class="fas fa-globe ml-2"></i></a>
+                        </li>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            
+            
+            
+            <!-- Slide Menu (Appears on both Mobile and Desktop) -->
+            <div id="sideMenu" class="side-menu ">
+                <div class="close-btn" onclick="closeMenu()">&times;</div>
+                <div class="container ">
+                    <div class="row navbar-content mt-5">
+                        <!-- Left Side (Menu) -->
+                        <div class="col-md-6 side-menu-left">
+                            <div class="side-menu-content ">
+                                <ul class="menu-list ">
+                                        <li><a href="#">Home <img src="assets/Component 33.png" alt=""></a></li>
+                                        <li><a href="#">Projects <img src="assets/Component 33.png" alt=""></a></li>
+                                        <li><a href="#">About Us <img src="assets/Component 33.png" alt=""></a></li>
+                                        <li><a href="#">Awards <img src="assets/Component 33.png" alt=""></a></li>
+                                        <li><a href="#">News <img src="assets/Component 33.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                      
+                        <!-- Right Side (Logo and Info) -->
+                        <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
+                            <div class="logo-navbar-section">
+                                <img src="assets/Group 1261156266.png" alt="Osus Logo" class="osus-logo">
+                                <div class="contact-info">
+                                        <p>Projects &nbsp;&nbsp; Facility management &nbsp;&nbsp; Contact Us</p>
+                                        <p>Privacy & Terms</p>
+                                        <h4>Contact@Osusdev.com</h4>
+                                        <h3>Working hours</h3>
+                                        <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
+                                        <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
+                                    </div>
+                                    
+                                <div class="social-icons mt-4">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-linkedin"></i>
+                                    <i class="fab fa-tiktok"></i>
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    
+
+   <!-- Video Section -->
+<section class="container">
+  <div class="vedio-title">
+      <h1>A Legacy of Transformation. <br>Beyond Buildings</h1>
+  </div>
+  <div class="video-section">
+      <div class="background-image"></div>
+      <video class="background-video" playsinline autoplay muted loop>
+          <source src="assets/-dfca-47a0-bb03-b262236b52db.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+</section>
+
+
+
+<!-- Numbers -->     
+<section class="counter-section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="counter-wrapper">
+                        <div class="counter">+12K</div>
+                    </div>
+                    <div class="description-numbers">Residential Units</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="counter-wrapper">
+                        <div class="counter">+11K</div>
+                    </div>
+                    <div class="description-numbers">M2 Plot Area</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="counter-wrapper">
+                        <div class="counter">+09K</div>
+                    </div>
+                    <div class="description-numbers">Offices</div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="counter-wrapper">
+                        <div class="counter">+12K</div>
+                    </div>
+                    <div class="description-numbers">M2 Built-up Area</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+<!-- Introduction -->
+<section class="introduction-section">
+  <div class="container">
+      <div class="row">
+          <!-- Left Column -->
+          <div class="col-md-6 parallax-text">
+              <h5 class="intro-title"data-aos="fade-up" data-aos-duration="800">Introduction</h5>
+              <h1 class="legacy-title"data-aos="fade-up" data-aos-duration="800">A Legacy of <br>Transformation.<br>Beyond Buildings</h1>
+          </div>
+          <!-- Right Column -->
+          <div class="col-md-6 business-strategy">
+              <p data-aos="fade-up" data-aos-duration="800">
+                  Our informed business strategy rests upon the pillars of innovation and adaptability.
+                  Rooted in Riyadh, we strategically centre our efforts on a diverse range of ventures,
+                  including residential, commercial, hospitality, retail, destinations, and public developments,
+                  reflecting the multifaceted nature of our brand.
+              </p>
+              <a href="#" class="btn btn-outline-light btn-lg mt-4"data-aos="fade-up" data-aos-duration="800">
+                  More About Us <img src="assets/arrow-down.svg" alt="">
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+
+  
+  
+<!-- Featured Portfolio --> 
+<div class="container">
+
+  <div class="business-strategy-portfolio text-center my-5">
+    <h2 data-aos="fade-up" data-aos-duration="800">Featured Portfolio</h2>
+    <p data-aos="fade-up" data-aos-duration="800" >Our informed business strategy rests upon the pillars of innovation <br> and adaptability.</p>
+  
+    <div class="row portfolio-row flex-container justify-content-center">
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio1.png" alt="Project 1"data-aos="fade-up" data-aos-duration="800">
+          <div class="overlay">
+            <p class="overlay-text">OD Projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio3.png" alt="Project 2"data-aos="fade-up" data-aos-duration="800">
+          <div class="overlay">
+            <p class="overlay-text">Land</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio2.png" alt="Project 3"data-aos="fade-up" data-aos-duration="800">
+          <div class="overlay">
+            <p class="overlay-text">Commercial Projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 d-flex justify-content-center">
+        <div class="circle-img">
+          <img src="assets/portofolio4.png" alt="Project 4"data-aos="fade-up" data-aos-duration="800">
+          <div class="overlay">
+            <p class="overlay-text">Residential Projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="mt-5">
+      <a href="#" class="btn custom-btn"data-aos="fade-up" data-aos-duration="800">Explore all projects <img src="assets/arrow-down.svg" alt=""></a>
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+  
+<!--Crafting-->
+    <section class="crafting">
+      <div class="crafting-text"data-aos="fade-up" data-aos-duration="800">
+          Crafting Distinctive <br> Environments
+      </div>
+  </section>
+
+ 
+
+    <!-- Unlocking -->
+<div class="parallax-container">
+  <div class="container unlocking-exceptional">
+    <div class="unlock-body">
+      <div class="text-center mb-5">
+        <h6 class="unlocking-subtitle animated-title"data-aos="fade-up" data-aos-duration="800">Why OSUS</h6>
+        <h2 class="unlocking-title animated-title"data-aos="fade-up" data-aos-duration="800">Unlocking Exceptional Value</h2>
+        <h2 class="unlocking-title animated-title"data-aos="fade-up" data-aos-duration="800">Distinctive Business Practices</h2>
+      </div>
+      <div class="row">
+        <!-- First Card -->
+        <div class="col-md-6 position-relative">
+          <div class="unlockcard text-white">
+            <div class="unlockcard-body">
+              <div class="unlock-icon-wrapper text-left mb-2">
+                <div class="unlock-icon d-flex justify-content-left align-items-left">
+                  <img src="assets/card2icon.png" alt="Icon" class="img-fluid"data-aos="fade-up" data-aos-duration="800">
+                </div>
+              </div>
+              <h5 class="card-unlock-title text-left"data-aos="fade-up" data-aos-duration="800">Impressive Portfolio</h5>
+              <p class="card-unlock-text"data-aos="fade-up" data-aos-duration="800">Our diverse portfolio of developments empowers a new generation of leaders, motivating us to explore opportunities for expanding the white land portfolio alongside residential and commercial projects.</p>
+            </div>
+          </div>
+          <div class="horizontal-line"></div>
+          <div class="vertical-line"></div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="col-md-6 position-relative">
+          <div class="unlockcard text-white">
+            <div class="unlockcard-body">
+              <div class="unlock-icon-wrapper text-left mb-2">
+                <div class="unlock-icon d-flex justify-content-left align-items-left">
+                  <img src="assets/card2icon.png" alt="Icon" class="img-fluid"data-aos="fade-up" data-aos-duration="800">
+                </div>
+              </div>
+              <h5 class="card-unlock-title text-left"data-aos="fade-up" data-aos-duration="800">Lucrative Investments</h5>
+              <p class="card-unlock-text"data-aos="fade-up" data-aos-duration="800">Our dedication to innovation and excellence drives internal investments in technology, work environment, and talent, enhancing our ability to deliver exceptional value.</p>
+            </div>
+          </div>
+          <div class="vertical-line-left"></div>
+          <div class="horizontal-line"></div>
+        </div>
+
+        <!-- Third Card -->
+        <div class="col-md-6 position-relative">
+          <div class="unlockcard text-white">
+            <div class="unlockcard-body">
+              <div class="unlock-icon-wrapper text-left mb-2">
+                <div class="unlock-icon d-flex justify-content-left align-items-left">
+                  <img src="assets/card2icon.png" alt="Icon" class="img-fluid"data-aos="fade-up" data-aos-duration="800">
+                </div>
+              </div>
+              <h5 class="card-unlock-title text-left"data-aos="fade-up" data-aos-duration="800">Investment Strategies</h5>
+              <p class="card-unlock-text"data-aos="fade-up" data-aos-duration="800">We persistently build sophisticated investment strategies to deliver value to all stakeholders, which optimizes returns.</p>
+            </div>
+          </div>
+          <div class="vertical-line"></div>
+        </div>
+
+        <!-- Fourth Card -->
+        <div class="col-md-6 position-relative">
+          <div class="unlockcard text-white">
+            <div class="unlockcard-body">
+              <div class="unlock-icon-wrapper text-left mb-2">
+                <div class="unlock-icon d-flex justify-content-left align-items-left">
+                  <img src="assets/card2icon.png" alt="Icon" class="img-fluid"data-aos="fade-up" data-aos-duration="800">
+                </div>
+              </div>
+              <h5 class="card-unlock-title text-left"data-aos="fade-up" data-aos-duration="800">Customer Experience</h5>
+              <p class="card-unlock-text"data-aos="fade-up" data-aos-duration="800">Our commitment to excellence extends beyond development, encompassing every touchpoint, ensuring we deliver an exceptional customer journey consistently.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+ <!-- Steps -->
+<section class="steps-section container text-center py-5">
+  <h2 class="steps-title mb-4">Move in three steps</h2>
+  <div class="row justify-content-center">
+      <!-- Step 1 -->
+      <div class="col-md-4 mb-4 step-item">
+          <div class="step-content">
+              <img src="assets/move1.png" alt="Contact Us" class="img-fluid mb-3">
+              <h5 class="move-title">Contact us</h5>
+              <p class="move-subtitle">Tell us what kind of house you are looking for, and we will provide you with an estimate and a plan to proceed with it.</p>
+          </div>
+      </div>
+      <!-- Step 2 -->
+      <div class="col-md-4 mb-4 step-item">
+          <div class="step-content">
+              <img src="assets/move2.png" alt="Meet Our Architects" class="img-fluid mb-3">
+              <h5 class="move-title">Meet our architects</h5>
+              <p class="move-subtitle">Let's work out the design in detail together. When it's ready, we'll present you with a final estimate, sign a contract and start construction.</p>
+          </div>
+      </div>
+      <!-- Step 3 -->
+      <div class="col-md-4 mb-4 step-item">
+          <div class="step-content">
+              <img src="assets/move3.png" alt="Move In" class="img-fluid mb-3">
+              <h5 class="move-title">Move in</h5>
+              <p class="move-subtitle">The whole process will take us 99 days and we will make sure it goes smoothly.</p>
+          </div>
+      </div>
+  </div>
+  <div class="mt-2">
+    <a href="#" class="btn btn-outline-primary custom-btn">Register Interest <img src="assets/arrow-down.svg" alt=""></a>
+  </div>
+</section>
+
+
+
+
+    <!-- News Section -->
+<div class="news-section">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="news-header">
+              <h2>News</h2>
+              <p>be updated with OSUS news</p>
+          </div>
+          <div class="col-md-12">
+              <div class="news-slider">
+                  <div class="news-slide-item">
+                      <div class="news-card"data-cue="fadeIn">
+                          <img src="assets/slid1.png" alt="News Image">
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Chooses Jorge Jesus as brand ambassador</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card"data-cue="fadeIn">
+                          <img src="assets/slid2.png" alt="News Image">
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Chooses Jorge Jesus as brand ambassador</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <img src="assets/slid3.png" alt="News Image">
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Chooses Jorge Jesus as brand ambassador</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <img src="assets/slid2.png" alt="News Image">
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Launches New Initiative</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <img src="assets/slid1.png" alt="News Image">
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Partners with Local Businesses</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <img src="assets/slid3.png" alt="News Image">
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Expands Its Reach</h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Company Info -->
+      <div class="col-md-6">
+    
+        <img src="assets/footer-logo.png" alt="OSUS Logo" class="footer-logo">
+
+     
+        <p class="company-description">
+          Osus Real Estate is a Saudi Real Estate Development Company based in Riyadh. Founded in 2006, we endeavour to craft profitable and iconic projects ranging from residential, commercial, hospitality, and raw lands.
+        </p>
+        
+        <div class="working-hours">
+          <p><strong>Working hours</strong></p>
+     
+          <p><span>Call Centre</span><span>Sat to Thu 9 AM to 10 PM</span></p>
+          <p><span>Sales Centre</span><span>All week days from 3 PM to 11 PM</span></p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-icons-footer mt-4">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-tiktok"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3 quick-links">
+        <h6>Quick links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About Osus</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+
+      <!-- Badge -->
+      <div class="col-md-3 text-md-end gptw-badge">
+        <img src="assets/footer-img.png" alt="Great Place To Work Certified Badge">
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4">
+      <p>All rights reserved. © OSUS Real Estate 2024</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+      
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+
+<!-- Slick Slider -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- mmenu -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.13/mmenu.min.js"></script>
+
+<!-- Nice Select & Wow & Parallax -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/wow.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+<!-- GSAP (for loading page) -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+<!-- FancyBox (for image or video popup) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- Bootstrap Bundle with Popper (JavaScript) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-Xk/5uHBm6F59Ecf7DzN93ewP2eRTtM0NFdQUz3xv2d+1V/kd+ufPQyM4o5XzY0/ymuwVp6LMTPhvquKeXilrMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Waypoints & CounterUp (for animation) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+<script src="./assets/js/jquery.counterup.min.js"></script>
+
+<!-- Swiper Slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
+
+<!-- Main Script -->
+<script src="/js/main.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="scrollCue.min.js"></script>
+
+<script>
+<!-- Initialize AOS -->
+AOS.init({
+  once: false, 
+});
+</script>
+
+<script>scrollCue.init();</script>
+  
+</body>
+</html>
