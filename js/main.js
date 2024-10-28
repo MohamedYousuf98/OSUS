@@ -48,22 +48,94 @@ $(document).ready(function () {
   });
 });
 
-
 // Select the custom cursor element
-const customCursor = document.querySelector('.custom-cursor');
+const customCursor = document.querySelector(".custom-cursor");
 
 // Update cursor position on mouse move
-document.addEventListener('mousemove', (e) => {
-    customCursor.style.left = `${e.pageX - customCursor.offsetWidth / 5}px`;
-    customCursor.style.top = `${e.pageY - customCursor.offsetHeight / 5}px`;
+document.addEventListener("mousemove", (e) => {
+  customCursor.style.left = `${e.pageX - customCursor.offsetWidth / 5}px`;
+  customCursor.style.top = `${e.pageY - customCursor.offsetHeight / 5}px`;
 });
 
 // Add hover effect when mouse enters links or buttons
-document.querySelectorAll('a, button').forEach((element) => {
-    element.addEventListener('mouseenter', () => {
-        customCursor.classList.add('hover');
-    });
-    element.addEventListener('mouseleave', () => {
-        customCursor.classList.remove('hover');
-    });
+document.querySelectorAll("a, button").forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    customCursor.classList.add("hover");
+  });
+  element.addEventListener("mouseleave", () => {
+    customCursor.classList.remove("hover");
+  });
+});
+
+// vedio
+window.addEventListener("DOMContentLoaded", function () {
+  const videoContainer = document.querySelector(".video-container");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          videoContainer.classList.add("fullscreen");
+          videoContainer.classList.remove("hidden");
+          videoContainer.style.maxWidth = "100%";
+        } else {
+          videoContainer.classList.add("hidden");
+          videoContainer.classList.remove("fullscreen");
+          videoContainer.style.maxWidth = "1200px";
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(videoContainer);
+});
+
+// Unlocking Section
+window.addEventListener("scroll", function () {
+  const section = document.querySelector(".unlocking-exceptional");
+  const rect = section.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2) {
+    section.classList.add("scaled");
+  } else {
+    section.classList.remove("scaled");
+  }
+});
+
+//Numbers
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  const startCounting = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const increment = Math.ceil(target / 100);
+
+    const updateCount = () => {
+      counter.classList.add("hidden");
+      setTimeout(() => {
+        count += increment;
+        if (count >= target) {
+          count = target;
+        }
+        counter.innerText = `+${count}K`;
+        counter.classList.remove("hidden");
+
+        if (count < target) {
+          setTimeout(updateCount, 500);
+        } else {
+          setTimeout(() => {
+            count = 0;
+            updateCount();
+          }, 2000);
+        }
+      }, 300);
+    };
+
+    updateCount();
+  };
+
+  counters.forEach((counter) => startCounting(counter));
 });
