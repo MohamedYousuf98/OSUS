@@ -85,42 +85,82 @@ document.querySelectorAll("a, button").forEach((element) => {
   });
 });
 
-// vedio
 window.addEventListener("DOMContentLoaded", function () {
   const videoContainer = document.querySelector(".video-container");
+
+
+  videoContainer.classList.add("initial"); 
+
+
+  let timeoutId;
+
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          videoContainer.classList.add("fullscreen");
-          videoContainer.classList.remove("hidden");
-          videoContainer.style.maxWidth = "100%";
+    
+          clearTimeout(timeoutId);
+
+        
+          if (!videoContainer.classList.contains("fullscreen")) {
+            timeoutId = setTimeout(() => {
+              videoContainer.classList.add("fullscreen");
+              videoContainer.classList.remove("hidden");
+              videoContainer.style.maxWidth = "100%";
+            }, 1500); 
+          }
         } else {
-          videoContainer.classList.add("hidden");
+      
+          clearTimeout(timeoutId);
           videoContainer.classList.remove("fullscreen");
+          videoContainer.classList.add("hidden");
           videoContainer.style.maxWidth = "1200px";
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.5 } 
   );
 
   observer.observe(videoContainer);
+
+  window.addEventListener("scroll", () => {
+    if (videoContainer.classList.contains("fullscreen")) {
+      videoContainer.classList.remove("fullscreen");
+      videoContainer.classList.add("animated"); 
+    
+      setTimeout(() => {
+        videoContainer.classList.remove("animated");
+        videoContainer.classList.add("fullscreen");
+      }, 2000);
+    }
+  });
 });
 
 // Unlocking Section
+let timeoutId; 
+
 window.addEventListener("scroll", function () {
   const section = document.querySelector(".unlocking-exceptional");
   const rect = section.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 
+
   if (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2) {
-    section.classList.add("scaled");
+
+    clearTimeout(timeoutId);
+
+  
+    timeoutId = setTimeout(() => {
+      section.classList.add("scaled");
+    }, 25); 
   } else {
+   
+    clearTimeout(timeoutId);
     section.classList.remove("scaled");
   }
 });
+
 
 //Numbers
 document.addEventListener("DOMContentLoaded", () => {

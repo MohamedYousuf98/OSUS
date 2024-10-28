@@ -219,7 +219,7 @@ html {
 
 .social-icons i:hover {
   color: #c5aa84;
-  transform: scale(1.1) rotate(10deg); 
+ 
   
 }
 
@@ -354,13 +354,24 @@ html {
   color: #fff;
 }
 /*------------------------------- Vedio section -------------------------------*/
-
 .video-container {
   position: relative;
   overflow: hidden;
-  max-width: 100%; 
-  margin: 20px auto 0; 
-  transition: max-width 1s ease, transform 1s ease; 
+  max-width: 100%;
+  margin: 20px auto 0;
+  transition: max-width 1s ease, transform 1s ease, border-radius 1s ease; 
+}
+
+.video-container.initial {
+  max-width: 1200px;
+  transform: none;
+  border-radius: 70px; 
+}
+
+.video-container.fullscreen {
+  max-width: 100%;
+  transform: scale(1.05);
+
 }
 
 .video-title h1 {
@@ -378,18 +389,17 @@ html {
 .video-section {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 100vh; 
   overflow: hidden;
-  border-radius: 70px;
+  border-radius: 70px; 
   margin-top: 50px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 1s ease, border-radius 1s ease, height 1s ease;
+  transition: transform 1s ease, border-radius 1s ease, height 1s ease; 
 }
 
 .video-container.fullscreen .video-section {
   transform: scale(1.05);
-  border-radius: 0; 
-  height: 100vh; 
+
 }
 
 .background-image {
@@ -412,10 +422,9 @@ html {
   min-width: 100%;
   min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: contain ; 
+  object-fit: contain;
   z-index: 2;
 }
-
 
 @media (max-width: 768px) {
   .video-title h1 {
@@ -423,6 +432,8 @@ html {
     padding-top: 22% !important;
   }
 }
+
+
 /*--------------------------------Numbers Section ----------------------------*/
 .counter-section {
   text-align: center;
@@ -1049,6 +1060,7 @@ html {
   margin-bottom: 50px;
   overflow: hidden;
   position: relative;
+  text-align: center; 
 }
 
 .steps-title {
@@ -1057,24 +1069,35 @@ html {
   color: #1e1e1c;
   position: relative;
   z-index: 2;
+  margin-bottom: 20px; 
+  transition: color 0.3s ease; 
 }
 
 .steps-section .step-item .move-title {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 24px; 
   color: #1e1e1c;
-  margin-bottom: 15px;
+  margin-bottom: 10px; 
+  animation: textMove 3s ease-in-out infinite; 
 }
 
 .steps-section .step-item .move-subtitle {
   font-weight: 400;
-  font-size: 17px;
+  font-size: 18px; 
   color: #6c757d;
   align-items: center;
   text-align: center;
   justify-content: center;
   display: flex;
   max-width: 90%;
+  margin: 0 auto;
+  animation: textMove 3s ease-in-out infinite;
+}
+
+
+@keyframes textMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); } 
 }
 
 /* Parallax effect for the step images */
@@ -1082,40 +1105,40 @@ html {
   width: 100%;
   height: 380px;
   margin-bottom: 20px;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease; 
   transform: translateY(0);
 }
 
-/* CSS */
-@keyframes rotateImage {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Animation for smooth movement */
+@keyframes smoothMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); } 
 }
 
 .step-content img {
-  animation: rotateImage 8s linear infinite;
+  animation: smoothMove 1.5s ease-in-out infinite; 
 }
 
 
-/* Parallax animation on scroll */
 .step-content {
   position: relative;
   transform: translateY(0);
   transition: transform 0.5s ease-out;
 }
 
-/* JavaScript-based scroll effect */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .step-item img {
-    height: auto;
+    height: auto; 
   }
   .steps-title {
-    font-size: 28px;
+    font-size: 28px; 
   }
   .steps-section .step-item .move-subtitle {
-    max-width: 100%;
+    max-width: 100%; 
   }
 }
+
 
 /*----------------------------------News Section --------------------------*/
 .news-section {
@@ -1259,26 +1282,31 @@ html {
   color: #ffffff;
 }
 
+/* Continuous rotation animation */
+@keyframes continuousRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Social icons with rotation only on hover */
 .social-icons-footer i {
   font-size: 24px;
   margin: 0 10px;
   cursor: pointer;
   color: #ffffff;
-  transition: 0.3s ease;
 }
 
 .social-icons-footer i:hover {
+  transform: rotate(10deg) !important;
   color: #c5aa84;
-  transform: scale(1.1) rotate(10deg); 
+  transition: color 0.1s ease;
 }
 
-.working-hours p span {
-  margin-right: 50px;
-  font-size: 15px;
-  font-weight: 400;
-  color: #ffffff;
-}
-
+/* Quick links with rotation only on hover */
 .quick-links h6 {
   font-weight: 500;
   font-size: 22px;
@@ -1299,12 +1327,13 @@ html {
   color: #ffffff;
   font-size: 18px;
   font-weight: 400;
-  transition: color 0.5s ease;
+  display: inline-block; 
+  transition: transform 0.15s ease, color 0.15s ease !important;
 }
 
 .quick-links ul li a:hover {
-  color: #c5aa84;
-    transform: scale(1.1) rotate(10deg);    
+  color: #c5aa84; 
+  transform: rotate(10deg) !important; 
 }
 
 
