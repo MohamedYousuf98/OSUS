@@ -7,6 +7,24 @@ function closeMenu() {
   document.getElementById("sideMenu").classList.remove("side-menu-open");
 }
 
+// Dropdown Navbar
+function toggleDropdown() {
+  const dropdownContent = document.querySelector(".dropdown-content");
+  dropdownContent.classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.closest(".nav-item")) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
+
 // Vedio Section
 
 window.addEventListener("load", function () {

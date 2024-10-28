@@ -297,6 +297,62 @@ html {
     display: none;
   }
 }
+
+/*------------------------------Dropdown Navbar-------------------------------*/
+.nav-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #C5AA84;
+}
+.dropdown-content {
+  opacity: 0;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  padding: 10px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease, visibility 0.3s ease; 
+  visibility: hidden; 
+}
+
+
+.nav-item:hover .dropdown-content,
+.dropdown-content:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #C5AA84;
+  color: #fff;
+}
 /*------------------------------- Vedio section -------------------------------*/
 
 .video-container {
@@ -356,11 +412,17 @@ html {
   min-width: 100%;
   min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
+  object-fit: contain ; 
   z-index: 2;
 }
 
 
+@media (max-width: 768px) {
+  .video-title h1 {
+    font-size: 25px;
+    padding-top: 22% !important;
+  }
+}
 /*--------------------------------Numbers Section ----------------------------*/
 .counter-section {
   text-align: center;
