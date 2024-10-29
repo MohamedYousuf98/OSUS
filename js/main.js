@@ -88,30 +88,24 @@ document.querySelectorAll("a, button").forEach((element) => {
 window.addEventListener("DOMContentLoaded", function () {
   const videoContainer = document.querySelector(".video-container");
 
-
-  videoContainer.classList.add("initial"); 
-
+  videoContainer.classList.add("initial");
 
   let timeoutId;
-
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-    
           clearTimeout(timeoutId);
 
-        
           if (!videoContainer.classList.contains("fullscreen")) {
             timeoutId = setTimeout(() => {
               videoContainer.classList.add("fullscreen");
               videoContainer.classList.remove("hidden");
               videoContainer.style.maxWidth = "100%";
-            }, 1500); 
+            }, 1700);
           }
         } else {
-      
           clearTimeout(timeoutId);
           videoContainer.classList.remove("fullscreen");
           videoContainer.classList.add("hidden");
@@ -119,7 +113,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.5 } 
+    { threshold: 0.5 }
   );
 
   observer.observe(videoContainer);
@@ -127,8 +121,8 @@ window.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", () => {
     if (videoContainer.classList.contains("fullscreen")) {
       videoContainer.classList.remove("fullscreen");
-      videoContainer.classList.add("animated"); 
-    
+      videoContainer.classList.add("animated");
+
       setTimeout(() => {
         videoContainer.classList.remove("animated");
         videoContainer.classList.add("fullscreen");
@@ -138,29 +132,24 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 // Unlocking Section
-let timeoutId; 
+let timeoutId;
 
 window.addEventListener("scroll", function () {
   const section = document.querySelector(".unlocking-exceptional");
   const rect = section.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 
-
   if (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2) {
-
     clearTimeout(timeoutId);
 
-  
     timeoutId = setTimeout(() => {
       section.classList.add("scaled");
-    }, 25); 
+    }, 30);
   } else {
-   
     clearTimeout(timeoutId);
     section.classList.remove("scaled");
   }
 });
-
 
 //Numbers
 document.addEventListener("DOMContentLoaded", () => {
