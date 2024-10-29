@@ -371,6 +371,7 @@ html {
 .video-container.fullscreen {
   max-width: 100%;
   transform: scale(1.05);
+  border-radius: 0px; 
 
 }
 
@@ -505,7 +506,7 @@ html {
   padding: 150px 0; 
   color: white; 
   overflow: hidden; 
-  background-image: url("/assets/blackbg.jpg"); 
+  background-image: url("/assets/blackbg.webp"); 
   background-attachment: fixed; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -861,7 +862,7 @@ html {
 .crafting {
   position: relative;
   height: 650px;
-  background-image: url("/assets/crafting.png");
+  background-image: url("/assets/crafting.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -910,7 +911,7 @@ html {
 
 .unlocking-exceptional {
   position: relative;
-  background-image: url("/assets/cardsbg.jpg");
+  background-image: url("/assets/cardsbg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1471,3 +1472,107 @@ border:1px solid #B49973;
 
 
 /*----------------------------------------------All Projects---------------------------------------*/
+/*----------------------------------------------Header All Projects---------------------------------------*/
+/* Main section with Parallax Background */
+.projects-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/portofolio2.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 620px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Overlay gradient */
+.overlay-bg-proheader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+/* Content Styling */
+.projects-content {
+  position: relative;
+  z-index: 2;
+max-width: 850px;
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.projects-title {
+  font-size: 70px;
+  font-weight: 700;
+margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.projects-description {
+  font-size: 16px;
+  max-width: 850px;
+margin: 0 auto;
+  line-height: 1.6;
+font-weight: 400;
+}
+
+.icon-img {
+  width: 74px; 
+  height: 78px;
+  margin-right: 5px;
+  vertical-align: middle;
+  margin-bottom: 8px;
+  z-index: 1000;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .projects-section {
+      height: 400px;
+  }
+  .projects-title {
+      font-size: 50px;
+  }
+  .projects-description {
+      font-size: 14px;
+      max-width: 700px;
+  }
+  .icon-img {
+      width: 50px; 
+      height: 54px;
+  }
+}
+
+@media (max-width: 667px) {
+  .projects-section {
+      height: 580px; 
+      padding: 20px 0;
+  }
+  .projects-title {
+      font-size: 32px;
+      margin-bottom: 15px;
+  }
+  .projects-description {
+      font-size: 14px;
+      max-width: 100%;
+      padding: 0 10px;
+  }
+  .icon-img {
+      width: 46px; 
+      height: 50px;
+      margin-right: 5px;
+  }
+}
+
+/*----------------------------------------------Tabs---------------------------------------*/

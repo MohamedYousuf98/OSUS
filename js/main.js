@@ -103,7 +103,7 @@ window.addEventListener("DOMContentLoaded", function () {
               videoContainer.classList.add("fullscreen");
               videoContainer.classList.remove("hidden");
               videoContainer.style.maxWidth = "100%";
-            }, 1700);
+            }, 3000);
           }
         } else {
           clearTimeout(timeoutId);
@@ -117,18 +117,6 @@ window.addEventListener("DOMContentLoaded", function () {
   );
 
   observer.observe(videoContainer);
-
-  window.addEventListener("scroll", () => {
-    if (videoContainer.classList.contains("fullscreen")) {
-      videoContainer.classList.remove("fullscreen");
-      videoContainer.classList.add("animated");
-
-      setTimeout(() => {
-        videoContainer.classList.remove("animated");
-        videoContainer.classList.add("fullscreen");
-      }, 2000);
-    }
-  });
 });
 
 // Unlocking Section
@@ -144,7 +132,7 @@ window.addEventListener("scroll", function () {
 
     timeoutId = setTimeout(() => {
       section.classList.add("scaled");
-    }, 30);
+    }, 35);
   } else {
     clearTimeout(timeoutId);
     section.classList.remove("scaled");
@@ -186,3 +174,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   counters.forEach((counter) => startCounting(counter));
 });
+
+// Tabs
+document.querySelectorAll(".tab").forEach((tab) => {
+  tab.addEventListener("click", function () {
+    document
+      .querySelectorAll(".tab")
+      .forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+    document
+      .querySelectorAll(".content")
+      .forEach((content) => content.classList.remove("active"));
+    document
+      .getElementById(tab.getAttribute("data-tab"))
+      .classList.add("active");
+  });
+});
+
+toggleTab(0);
