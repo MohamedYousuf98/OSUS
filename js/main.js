@@ -103,7 +103,7 @@ window.addEventListener("DOMContentLoaded", function () {
               videoContainer.classList.add("fullscreen");
               videoContainer.classList.remove("hidden");
               videoContainer.style.maxWidth = "100%";
-            }, 3000);
+            }, 2700);
           }
         } else {
           clearTimeout(timeoutId);
@@ -206,3 +206,5 @@ window.addEventListener("scroll", function () {
     img.style.transform = `translate(-50%, -50%) scale(${1 + offset / 1000})`;
   });
 });
+
+
