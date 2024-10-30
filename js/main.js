@@ -192,3 +192,17 @@ document.querySelectorAll(".tab").forEach((tab) => {
 });
 
 toggleTab(0);
+
+// All projects effect
+window.addEventListener("scroll", function () {
+  const parallaxImages = document.querySelectorAll(
+    ".project-card img.project-img"
+  );
+
+  parallaxImages.forEach((img) => {
+    const speed = 0.3;
+    const offset = window.scrollY * speed;
+
+    img.style.transform = `translate(-50%, -50%) scale(${1 + offset / 1000})`;
+  });
+});
