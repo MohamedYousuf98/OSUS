@@ -71,7 +71,14 @@ main {
   flex-wrap: wrap;
   justify-content: center;
 }
-
+@media (max-width: 768px) {
+  .cursor-small, .cursor-large, .cursor{
+  display: none !important;
+}
+.vertical-line-fallback {
+  display: none;
+}
+}
 
 
 /*--------------------------------NAVBAR--------------------------------*/
