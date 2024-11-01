@@ -74,24 +74,6 @@ main {
 
 
 
-.support {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  padding: 10px;
-  display: flex;
-}
-
-.support a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 1.8rem;
-  transition: all 150ms ease;
-}
-
-.support a:hover {
-  transform: scale(1.1);
-}
 /*--------------------------------NAVBAR--------------------------------*/
 
 /* Basic Navbar Styles */
@@ -574,7 +556,7 @@ main {
   padding: 150px 0; 
   color: white; 
   overflow: hidden; 
-  background-image: url("/assets/cardsbg.webp"); 
+  background-image: url("../assets/cardsbg.webp"); 
   background-attachment: fixed; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -866,7 +848,7 @@ main {
 .crafting {
   position: relative;
   height: 650px;
-  background-image: url("/assets/crafting.webp");
+  background-image: url("../assets/crafting.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -915,7 +897,7 @@ main {
 
 .unlocking-exceptional {
   position: relative;
-  background-image: url("/assets/cardsbg.webp");
+  background-image: url("../assets/cardsbg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1236,7 +1218,7 @@ main {
   padding: 40px 0; 
   color: white; 
   overflow: hidden; 
-  background-image: url("/assets/blackbg (2).webp"); 
+  background-image: url("../assets/blackbg (2).webp"); 
   background-attachment: fixed; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -1500,7 +1482,7 @@ border:1px solid #B49973;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/assets/innerproj.webp');
+  background-image: url('../assets/innerproj.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1863,14 +1845,12 @@ font-weight: 400;
  /* Full section style */
  .header-all-news {
   position: relative;
-  background-image: url('/assets/news.header.webp');
+  background-image: url('../assets/news.header.webp');
   background-size: cover;
   background-position: center;
   height: 470px; 
   display: flex;
   flex-direction: column;
-
-
 }
 
 /* Overlay */
@@ -2066,7 +2046,7 @@ font-weight: 400;
   /* Custom styles for awards section */
   .header-awards {
     position: relative;
-    background-image: url('/assets/awards-header.webp');
+    background-image: url('../assets/awards-header.webp');
     background-size: cover;
     background-position: center;
     height: 580px; 
@@ -2341,7 +2321,7 @@ font-weight: 400;
   padding: 40px;
   text-align: left;
   margin-top: 100px;
-  background-image: url("/assets/blackbg\ \(2\).webp");
+  background-image: url("../assets/blackbg\ \(2\).webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2535,7 +2515,7 @@ color: #c5aa84;
 .vision-image-inner {
   height: 100%;
   width: 100%;
-  background-image: url('/assets/aboutheader.webp');
+  background-image: url('../assets/aboutheader.webp');
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
@@ -2628,7 +2608,7 @@ display: -webkit-box;
 /*-----------------Vision Section------------*/
 .vision-section-custom {
   position: relative;
-  background-image: url('/assets/vision.webp'); 
+  background-image: url('../assets/vision.webp'); 
   background-size: cover;
   color: #fff;
   height: 480px;
@@ -2717,7 +2697,7 @@ display: -webkit-box;
 /*------------------Our Values Section----------------------*/
 .values-section {
   position: relative;
-  background-image: url('/assets/values.webp'); 
+  background-image: url('../assets/values.webp'); 
   background-size: cover;
   background-position: center;
   color: #333;
