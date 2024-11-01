@@ -1,10 +1,99 @@
-// Navbar
-function openMenu() {
-  document.getElementById("sideMenu").classList.add("side-menu-open");
+// Custom Cursor
+console.clear();
+
+const { gsap } = window;
+
+const cursorOuter = document.querySelector(".cursor-large");
+const cursorInner = document.querySelector(".cursor-small");
+let isStuck = false;
+let mouse = {
+  x: -100,
+  y: -100,
+};
+
+let scrollHeight = 0;
+window.addEventListener("scroll", function (e) {
+  scrollHeight = window.scrollY;
+});
+
+let cursorOuterOriginalState = {
+  width: cursorOuter.getBoundingClientRect().width,
+  height: cursorOuter.getBoundingClientRect().height,
+};
+
+const buttons = document.querySelectorAll("main button");
+
+buttons.forEach((button) => {
+  button.addEventListener("pointerenter", handleMouseEnter);
+  button.addEventListener("pointerleave", handleMouseLeave);
+});
+
+document.body.addEventListener("pointermove", updateCursorPosition);
+document.body.addEventListener("pointerdown", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 2,
+  });
+});
+document.body.addEventListener("pointerup", () => {
+  gsap.to(cursorInner, 0.15, {
+    scale: 1,
+  });
+});
+
+function updateCursorPosition(e) {
+  mouse.x = e.pageX;
+  mouse.y = e.pageY;
 }
 
+function updateCursor() {
+  gsap.set(cursorInner, {
+    x: mouse.x,
+    y: mouse.y,
+  });
+
+  if (!isStuck) {
+    gsap.to(cursorOuter, {
+      duration: 0.15,
+      x: mouse.x - cursorOuterOriginalState.width / 2,
+      y: mouse.y - cursorOuterOriginalState.height / 2,
+    });
+  }
+
+  requestAnimationFrame(updateCursor);
+}
+
+updateCursor();
+
+function handleMouseEnter(e) {
+  isStuck = true;
+  const targetBox = e.currentTarget.getBoundingClientRect();
+  gsap.to(cursorOuter, 0.2, {
+    x: targetBox.left,
+    y: targetBox.top + scrollHeight,
+    width: targetBox.width,
+    height: targetBox.width,
+    borderRadius: 0,
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+  });
+}
+
+function handleMouseLeave(e) {
+  isStuck = false;
+  gsap.to(cursorOuter, 0.2, {
+    width: cursorOuterOriginalState.width,
+    height: cursorOuterOriginalState.width,
+    borderRadius: "50%",
+    backgroundColor: "transparent",
+  });
+}
+
+// Navbar
+const sideMenu = document.getElementById("sideMenu");
+function openMenu() {
+  sideMenu.classList.add("side-menu-open");
+}
 function closeMenu() {
-  document.getElementById("sideMenu").classList.remove("side-menu-open");
+  sideMenu.classList.remove("side-menu-open");
 }
 
 // Dropdown Navbar
@@ -25,18 +114,15 @@ window.onclick = function (event) {
   }
 };
 
-// Vedio Section
+// Video Section
+const video = document.querySelector(".background-video");
 
-window.addEventListener("load", function () {
-  const video = document.querySelector(".background-video");
-
-  video.addEventListener("click", function () {
-    if (!video.paused) {
-      video.pause();
-    } else {
-      video.play();
-    }
-  });
+video.addEventListener("click", function () {
+  if (!video.paused) {
+    video.pause();
+  } else {
+    video.play();
+  }
 });
 
 // News Slider
@@ -48,44 +134,16 @@ $(document).ready(function () {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrow: false,
+    arrows: false,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   });
 });
 
-// Select the custom cursor element
-const customCursor = document.querySelector(".custom-cursor");
-
-// Update cursor position on mouse move
-document.addEventListener("mousemove", (e) => {
-  customCursor.style.left = `${e.pageX - customCursor.offsetWidth / 5}px`;
-  customCursor.style.top = `${e.pageY - customCursor.offsetHeight / 5}px`;
-});
-
-// Add hover effect when mouse enters links or buttons
-document.querySelectorAll("a, button").forEach((element) => {
-  element.addEventListener("mouseenter", () => {
-    customCursor.classList.add("hover");
-  });
-  element.addEventListener("mouseleave", () => {
-    customCursor.classList.remove("hover");
-  });
-});
-
-window.addEventListener("DOMContentLoaded", function () {
+// Video Animation
+document.addEventListener("DOMContentLoaded", () => {
   const videoContainer = document.querySelector(".video-container");
 
   videoContainer.classList.add("initial");
@@ -124,85 +182,65 @@ let timeoutId;
 
 window.addEventListener("scroll", function () {
   const section = document.querySelector(".unlocking-exceptional");
-  const rect = section.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+  if (section) {
+    const rect = section.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-  if (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2) {
-    clearTimeout(timeoutId);
+    if (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2) {
+      clearTimeout(timeoutId);
 
-    timeoutId = setTimeout(() => {
-      section.classList.add("scaled");
-    }, 35);
-  } else {
-    clearTimeout(timeoutId);
-    section.classList.remove("scaled");
+      timeoutId = setTimeout(() => {
+        section.classList.add("scaled");
+      }, 35);
+    } else {
+      clearTimeout(timeoutId);
+      section.classList.remove("scaled");
+    }
   }
 });
 
-//Numbers
+// Numbers
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
 
   const startCounting = (counter) => {
     const target = +counter.getAttribute("data-target");
     let count = 0;
-    const increment = Math.ceil(target / 100);
 
     const updateCount = () => {
-      counter.classList.add("hidden");
-      setTimeout(() => {
-        count += increment;
-        if (count >= target) {
-          count = target;
-        }
-        counter.innerText = `+${count}K`;
-        counter.classList.remove("hidden");
+      const increment = Math.ceil(target / 200);
+      count += increment;
 
-        if (count < target) {
-          setTimeout(updateCount, 500);
-        } else {
-          setTimeout(() => {
-            count = 0;
-            updateCount();
-          }, 2000);
-        }
-      }, 300);
+      if (count >= target) {
+        counter.innerText = `+${target}K`;
+      } else {
+        counter.innerText = `+${count}K`;
+        setTimeout(updateCount, 300);
+      }
     };
 
     updateCount();
   };
 
-  counters.forEach((counter) => startCounting(counter));
-});
-
-// Tabs
-document.querySelectorAll(".tab").forEach((tab) => {
-  tab.addEventListener("click", function () {
-    document
-      .querySelectorAll(".tab")
-      .forEach((t) => t.classList.remove("active"));
-    tab.classList.add("active");
-    document
-      .querySelectorAll(".content")
-      .forEach((content) => content.classList.remove("active"));
-    document
-      .getElementById(tab.getAttribute("data-tab"))
-      .classList.add("active");
-  });
-});
-
-toggleTab(0);
-
-// All projects effect
-window.addEventListener("scroll", function () {
-  const parallaxImages = document.querySelectorAll(
-    ".project-card img.project-img"
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startCounting(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
   );
 
-  parallaxImages.forEach((img) => {
+  counters.forEach((counter) => observer.observe(counter));
+});
+
+// Projects Effect
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".project-card img.project-img").forEach((img) => {
     const speed = 0.3;
     const offset = window.scrollY * speed;
-
-    img.style.transform = `translate(-50%, -50%) scale(${1 + offset / 1000})`;
+    img.style.transform = `translateY(${offset}px)`;
   });
 });
