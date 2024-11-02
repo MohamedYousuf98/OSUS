@@ -438,45 +438,32 @@
 
   
   <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const newsImages = document.querySelectorAll(".image-wrapper img");
+    const speed = 0.3; 
+    const middleOfScreen = window.innerHeight / 2;
 
-    // Image wrapper effect
-  document.addEventListener("DOMContentLoaded", function () {
-      const newsImages = document.querySelectorAll(".image-wrapper img");
-  
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-              const img = entry.target;
-              const speed = 0.3;
-              const middleOfScreen = window.innerHeight / 2;
-  
-              if (entry.isIntersecting) {
-                  // Start updating the transform when the image is visible
-                  const updateTransform = () => {
-                      const rect = img.getBoundingClientRect();
-                      const scale = 1 + (middleOfScreen - rect.top) * 0.001;
-  
-                      // Apply border-radius along with the transform
-                      img.style.transform = `translate(0, ${-rect.top * 0.1}px) scale(${scale})`;
-                      img.style.borderRadius = '15px'; // Change this value as needed
-                      requestAnimationFrame(updateTransform);
-                  };
-  
-                  // Call the update function
-                  updateTransform();
-              } else {
-                  // Reset transformation when not in view
-                  img.style.transform = 'scale(1)';
-                  img.style.borderRadius = '15px'; // Maintain border-radius
-              }
-          });
-      });
-  
-      newsImages.forEach((img) => observer.observe(img));
-  });
-  
- 
-    
-  
+    newsImages.forEach((img) => {
+        img.addEventListener("mouseenter", () => {
+            const updateTransform = () => {
+                const rect = img.getBoundingClientRect();
+                const scale = 1 + (middleOfScreen - rect.top) * 0.001;
+
+            
+                img.style.transform = `translate(0, ${-rect.top * 0.1}px) scale(${scale})`;
+                img.style.borderRadius = '15px'; 
+                requestAnimationFrame(updateTransform);
+            };
+            updateTransform();
+        });
+
+        img.addEventListener("mouseleave", () => {
+            img.style.transform = 'scale(1)';
+            img.style.borderRadius = '15px'; 
+        });
+    });
+});
+
   <!-- Initialize AOS -->
   AOS.init({
     once: false, 

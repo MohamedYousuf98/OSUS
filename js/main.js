@@ -244,3 +244,27 @@ window.addEventListener("scroll", () => {
     img.style.transform = `translateY(${offset}px)`;
   });
 });
+
+$(document).ready(function () {
+  function initializeSlider() {
+    if ($(window).width() < 768) {
+      if (!$(".portfolio-slider").hasClass("slick-initialized")) {
+        $(".portfolio-slider").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1000,
+          dots: false,
+        });
+      }
+    } else {
+      if ($(".portfolio-slider").hasClass("slick-initialized")) {
+        $(".portfolio-slider").slick("unslick");
+      }
+    }
+  }
+  initializeSlider();
+  $(window).resize(function () {
+    initializeSlider();
+  });
+});
