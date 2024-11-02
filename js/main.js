@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
               videoContainer.classList.add("fullscreen");
               videoContainer.classList.remove("hidden");
               videoContainer.style.maxWidth = "100%";
-            }, 4500);
+            }, 4700);
           }
         } else {
           clearTimeout(timeoutId);
@@ -245,6 +245,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
+//  Portofolio Section
 $(document).ready(function () {
   function initializeSlider() {
     if ($(window).width() < 768) {
@@ -268,3 +269,20 @@ $(document).ready(function () {
     initializeSlider();
   });
 });
+// One Selected News
+
+const playButton = document.getElementById("playButton");
+const playButtonBg = document.getElementById("playButtonBg");
+function toggleVideo() {
+  if (video.paused) {
+    video.play();
+    playButton.style.display = "none";
+    playButtonBg.style.display = "none";
+  } else {
+    video.pause();
+    playButton.style.display = "block";
+    playButtonBg.style.display = "block";
+  }
+}
+playButton.addEventListener("click", toggleVideo);
+video.addEventListener("click", toggleVideo);
