@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSUS</title>
+    <meta name="description" content="Welcome to our website. We offer a variety of useful and interesting content across different topics. Enjoy a rich and informative browsing experience.">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Slick Slider JS -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <!-- Custom Script -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-Sy4T3FZT63M5ac+4e4vG1mf8aKOVbIQ6E+0BJoO+IR+JP4PzS6zMprZX51jItNHRq5c7QW8B9yWHD8MwVGmVYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="scrollCue.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+
+</head>
+
+<body>
+
+ 
+
+        <nav class="navbar bg-white pt-3 pb-3">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/logo.webp" alt="Logo">
+                    </a>
+            
+                    <!-- Globe icon and menu button aligned next to each other on one line -->
+                    <ul class="navbar-nav d-flex flex-row align-items-center">
+                           <!-- Menu button -->
+                           <li class="nav-item">
+                                <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
+                                    <i class="fas fa-bars mr-2 "></i> 
+                                <span style="font-weight: 600; margin-left: 10px;">Menu</span>
+                            </button>
+                        </li>
+
+                        <!-- Globe icon -->
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="#">
+                              <i class="fas fa-globe ml-2"></i>
+                          </a>
+                          <div class="dropdown-content">
+                              <a href="#" onclick="setLanguage('en')">English</a>
+                              <a href="#" onclick="setLanguage('ar')">العربية</a>
+                          </div>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+            
+    
+            
+            <!-- Slide Menu (Appears on both Mobile and Desktop) -->
+            <div id="sideMenu" class="side-menu ">
+                <div class="close-btn-popup" onclick="closeMenu()">&times;</div>
+                <div class="container ">
+                    <div class="row navbar-content mt-5">
+                        <!-- Left Side (Menu) -->
+                        <div class="col-md-6 side-menu-left">
+                            <div class="side-menu-content ">
+                                <ul class="menu-list ">
+                                  <li><a href="/index.html">Home <img src="assets/Component 33.webp" alt=""></a></li>
+                                  <li><a href="/allproject.html">Projects <img src="assets/Component 33.webp" alt=""></a></li>
+                                  <li><a href="about.html">About Osus <img src="assets/Component 33.webp" alt=""></a></li>
+                                  <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
+                                  <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
+                                  <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                      
+                        <!-- Right Side (Logo and Info) -->
+                        <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
+                            <div class="logo-navbar-section">
+                                <img src="assets/Group 1261156266.webp" alt="Osus Logo" class="osus-logo">
+                                <div class="contact-info">
+                                        <p>Projects &nbsp;&nbsp; Facility management &nbsp;&nbsp; Contact Us</p>
+                                        <p>Privacy & Terms</p>
+                                        <h4>Contact@Osusdev.com</h4>
+                                        <h3>Working hours</h3>
+                                        <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
+                                        <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
+                                    </div>
+                                    
+                                <div class="social-icons mt-4">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-linkedin"></i>
+                                    <i class="fab fa-tiktok"></i>
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+
+
+<!-- Section  -->
+<div class="header-innerproject">
+  <div class="innerproject-background">
+    <div class="overlay-inner-projects"></div>
+    <h1 class="innerproject-title"data-aos="fade-up" data-aos-duration="900">OSUS Housing Sada</h1>
+  </div>
+
+  <div class="header-innerproject-content"data-aos="fade-up" data-aos-duration="900">
+    <h2 class="innerproject-overview">Overview</h2>
+    <h4 class="overview-subtitle">Live will be easy and confirmable with OSUS amenities </h4>
+    <p class="innerproject-description">
+      Live will be easy and confirmable with OSUS amenities.
+      Housing Al Saada offers a modern residential oasis that includes 238 apartments distributed over 3.5 floors and a basement.
+      Thanks to its elegant contemporary architecture, meticulously designed spaces, and wonderful interior design, Housing Al Saada stands as a testament to urban luxury designed specifically for the vibrant community of Riyadh.
+    </p>
+    <a href="#" class="see-more-button w-20 d-flex align-items-center justify-content-center" style="width: 240px;"data-aos="fade-up" data-aos-duration="900">
+        Download Brochure
+        <img src="assets/arrow-down.svg" alt="" class="ms-2"> 
+    </a>
+  </div>
+</div>
+
+
+
+
+<!-- Numbers Section -->
+<section class="counter-innerproject ">
+    <div class="container">
+      <div class="row justify-content-between"data-aos="fade-up" data-aos-duration="900">
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="counter-wrapper">
+            <div class="counter" data-target="238">+238</div>
+          </div>
+          <div class="description-numbers">Residential Units</div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="counter-wrapper">
+            <div class="counter" data-target="17464">+364</div>
+          </div>
+          <div class="description-numbers">M2 Plot Area</div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="counter-wrapper">
+            <div class="counter" data-target="259">+259</div>
+          </div>
+          <div class="description-numbers">Offices</div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="counter-wrapper">
+            <div class="counter" data-target="117">+117</div>
+          </div>
+          <div class="description-numbers">M2 Built-up Area</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+<!-- Get Location -->
+<section class="project-location">
+    <div class="project-location-text"data-aos="fade-up" data-aos-duration="900">
+      <h2 >Location</h2>
+      <p>Housing 14 is located in the vibrant artery of the East, which is the most popular among residents of Riyadh.
+         Moving between its services will not exceed a few minutes. One of the largest and most sought-after neighborhoods in eastern Riyadh, it has the features that make it one of the best residential neighborhoods located east of the capital. It is characterized by the abundance of properties with average prices, and it is also a good environment for living, as it provides many facilities and service centers.</p>
+      <a href="#" class="get-location mt-4">
+          Get Location Live <img src="assets/arrow-down.svg" alt="">
+      </a>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Full-Width Video Section -->
+<section class="project-inner-video">
+    <div class="video-project-container">
+        <video id="projectVideo" class="background-project-video" playsinline autoplay muted loop>
+            <source src="assets/projectInner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Amenities Section -->
+<section class="amenities-section">
+  <div class="container">
+      <h2 data-aos="fade-up" data-aos-duration="900">Project Amenities</h2>
+      <p data-aos="fade-up" data-aos-duration="900">Live will be easy and comfortable with OSUS amenities</p>
+
+      <!-- Amenities Grid -->
+      <div class="row amenities-grid mt-5">
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites1.webp" alt="Service Basement Icon">
+              <p>Service basement</p>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites2.webp" alt="Smart Access Icon">
+              <p>Smart Access</p>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites3.webp" alt="Out Parking Area Icon">
+              <p>Out Parking area</p>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites4.webp" alt="Surveillance Cameras Icon">
+              <p>Surveillance cameras</p>
+          </div>
+      </div>
+
+      <!-- Separator Line -->
+      <div class="separator"></div>
+
+      <div class="row">
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites5.webp" alt="24/7 Security Icon">
+              <p>24/7 security</p>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites6.webp" alt="24/7 Security Icon">
+              <p>24/7 security</p>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites7.webp" alt="Green Garden Area Icon">
+              <p>Green garden area</p>
+          </div>
+          <div class="col-md-3 col-sm-4 col-6 amenity-item"data-aos="fade-up" data-aos-duration="900">
+              <img src="assets/amenites8.webp" alt="Fire Alarm Icon">
+              <p>Central Fire Alarm & Firefighting systems</p>
+          </div>
+      </div>
+
+      <!-- Download Button -->
+      <a href="#" class="download-btn" style="width: 240px;"data-aos="fade-up" data-aos-duration="900">
+          Download Brochure
+          <img src="assets/arrow-down.svg" alt="" class="ms-2"> 
+      </a>
+  </div>
+</section>
+
+
+
+<section class="gallery-section">
+ <div class="container"data-aos="fade-up" data-aos-duration="900">
+  <h2 class="gallery-title">Gallery</h2>
+  <p class="gallery-subtitle">Live will be easy and comfortable with OSUS amenities</p>
+
+  <!-- Slider Container -->
+<div class="gallery-slider">
+    <div class="gallery-image-wrapper">
+        <img src="assets/slid1.webp" alt="Image 1" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro2.webp", "assets/allcardpro1.webp"]' />
+    </div>
+    <div class="gallery-image-wrapper">
+        <img src="assets/slid2.webp" alt="Image 2" data-popup-images='["assets/allcardpro4.webp", "assets/allcardpro5.webp", "assets/allcardpro6.webp"]' />
+    </div>
+    <div class="gallery-image-wrapper">
+        <img src="assets/slid3.webp" alt="Image 3" data-popup-images='["assets/allcardpro7.webp", "assets/allcardpro5.webp", "assets/allcardpro1.webp"]' />
+    </div>
+    <div class="gallery-image-wrapper">
+        <img src="assets/slid4.webp" alt="Image 4" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro4.webp", "assets/allcardpro6.webp"]' />
+    </div>
+</div>
+
+
+  <!-- Custom Arrow Controls -->
+  <div class="custom-arrows">
+      <img src="assets/arrowleftinproject.svg" class="custom-prev-gallery" alt="Previous Slide">
+      <img src="assets/arrow-right.svg" class="custom-next-gallery" alt="Next Slide">
+  </div>
+  </div>
+</section>
+
+<!-- Popup Slider -->
+<div id="popup" style="display: none;">
+  <div class="popup-content">
+      <span class="close-btn-popup">&times;</span>
+      <div class="popup-slider"></div>
+      <div class="custom-lines"></div>
+      <div class="custom-controls">
+          <div class="custom-prev"><img src="assets/arrowleftinproject.svg"></div>
+          <div class="custom-next"><img src="assets/arrow-right.svg"></div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container my-5  ">
+    <div class="row modal-section align-items-left ">
+        <div class="col-md-4 text-start"data-aos="fade-up" data-aos-duration="900"> 
+            <h2>Types of models</h2>
+            <p>Housing 14 is located in the vibrant artery of the East, which is the most popular among residents of Riyadh.</p>
+            <a href="#" class="list-modals-btn  btn btn-primary d-flex align-items-left" style="width: 190px;"data-aos="fade-up" data-aos-duration="900">
+                List of models
+                <img src="assets/arrow-down.svg" alt="" class="ms-2 arrow-desktop-only">
+
+            </a>
+        </div>
+        <div class="col-md-8 position-relative">
+            <div class="model-slider">
+                <div class="model-slide"data-aos="fade-up" data-aos-duration="700">
+                    <img src="assets/model1.webp" alt="Model A">
+                    <div class="overlay-modal">Model A</div>
+                </div>
+                <div class="model-slide"data-aos="fade-up" data-aos-duration="1000">
+                    <img src="assets/model2.webp" alt="Model B">
+                    <div class="overlay-modal">Model B</div>
+                </div>
+                <div class="model-slide"data-aos="fade-up" data-aos-duration="1300">
+                    <img src="assets/model3.webp" alt="Model C">
+                    <div class="overlay-modal">Model C</div>
+                </div>
+                <div class="model-slide">
+                    <img src="assets/model2.webp" alt="Model D">
+                    <div class="overlay-modal">Model D</div>
+                </div>
+                <div class="model-slide">
+                    <img src="assets/model1.webp" alt="Model E">
+                    <div class="overlay-modal">Model E</div>
+                </div>
+            </div>
+            <img src="assets/arrow-right.svg" alt="Next" id="custom-arrow-right" class="custom-arrow"data-aos="fade-up" data-aos-duration="1400">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container master-img"data-aos="fade-up" data-aos-duration="900">
+    <div class="master-header text-center">
+        <h2 class="modal-title">Master Plan</h2>
+        <p class="modal-subtitle">Move through the plan and live fact journey</p>
+    </div>
+
+    <div class="master-image-container ">
+        <div class="image-wrapper-master"> 
+            <img src="assets/masterplan.webp" alt="Master Plan" class="modal-main-image">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- News Section -->
+<div class="news-section-project ">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="news-header">
+              <h2>Latest Construction Updates</h2>
+              <p>be updated with OSUS news</p>
+          </div>
+          <div class="col-md-12">
+              <div class="news-slider">
+                  <div class="news-slide-item" >
+                      <div class="news-card" >
+                          <div class="image-wrapper">
+                              <img src="assets/construction1.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Chooses Jorge Jesus as brand ambassador</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card" >
+                          <div class="image-wrapper">
+                              <img src="assets/construction2.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Chooses Jorge Jesus as brand ambassador</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/construction3.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Chooses Jorge Jesus as brand ambassador</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/construction4.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Launches New Initiative</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/construction2.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Partners with Local Businesses</h5>
+                      </div>
+                  </div>
+                  <div class="news-slide-item">
+                      <div class="news-card">
+                          <div class="image-wrapper">
+                              <img src="assets/construction3.webp" alt="News Image">
+                          </div>
+                      </div>
+                      <div class="card-news-body">
+                          <small>1 Aug 2024</small>
+                          <h5>Osus Expands Its Reach</h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+
+
+<div class="container portofolio-project-section mt-5">
+  <!-- Title and Subtitle -->
+  <h2 class="portofolio-project-title">Project Portfolio</h2>
+  <p class="portofolio-project-subtitle">All the features are at your fingertips. Find out what you want.</p>
+  
+  <!-- Portfolio Cards -->
+  <div class="row justify-content-center">
+    <div class="col-md-3 mb-4">
+        <div class="portofolio-project-card">
+            <div class="portofolio-project-icon">
+                <img src="assets/feature2.svg" alt="feature icon">
+            </div>
+            <p>Company Profile</p>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="portofolio-project-card">
+            <div class="portofolio-project-icon">
+                <img src="assets/feature2.svg" alt="feature icon">
+            </div>
+            <p>List of Models</p>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="portofolio-project-card">
+            <div class="portofolio-project-icon">
+                <img src="assets/feature2.svg" alt="feature icon">
+            </div>
+            <p>Project Price List</p>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="portofolio-project-card">
+            <div class="portofolio-project-icon">
+                <img src="assets/feature2.svg" alt="feature icon">
+            </div>
+            <p>Project Gallery</p>
+        </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="image-register">
+    <div class="container image-overlay-container">
+        <div class="row  align-items-center register-section">
+            <!-- Left Side - Form -->
+            <div class="col-lg-5 form-register">
+                <h2>Register your interest</h2>
+                <p>Are you interested in the <span>Sada</span> project? Hurry up and fill in your data now.</p>
+                <form class="w-100">
+                    <input type="text" class="form-control input-field mb-4" placeholder="Your Name">
+                    <input type="email" class="form-control input-field mb-4" placeholder="Email">
+                    <input type="tel" id="phone" class="form-control input-field phone-input mb-4" placeholder="Phone Number">
+                    <button type="submit" class="btn btn-contact mt-4">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Right Side - Image Background with Overlay -->
+            <div class="col-lg-7 image-overlay-register"></div>
+        </div>
+    </div>
+</div>
+
+
+
+       
+            <footer class="footer">
+                <div class="container">
+                  <div class="row">
+                    <!-- Company Info -->
+                    <div class="col-md-6">
+                  
+                     
+                        <a href="/index.html" target="_blank">
+                            <img src="assets/footer-logo.webp" alt="OSUS Logo" class="footer-logo">
+                        </a>
+              
+                   
+                      <p class="company-description">
+                        Osus Real Estate is a Saudi Real Estate Development Company based in Riyadh. Founded in 2006, we endeavour to craft profitable and iconic projects ranging from residential, commercial, hospitality, and raw lands.
+                      </p>
+                      
+                      <div class="working-hours">
+                        <p><strong>Working hours</strong></p>
+                   
+                        <p><span>Call Centre</span><span>Sat to Thu 9 AM to 10 PM</span></p>
+                        <p><span>Sales Centre</span><span>All week days from 3 PM to 11 PM</span></p>
+                      </div>
+              
+                      <!-- Social Media Links -->
+                      <div class="social-icons-footer mt-4">
+                        <i class="fab fa-facebook"data-aos="fade-up" data-aos-duration="500"></i>
+                        <i class="fab fa-twitter"data-aos="fade-up" data-aos-duration="700"></i>
+                        <i class="fab fa-youtube"data-aos="fade-up" data-aos-duration="900"></i>
+                        <i class="fab fa-linkedin"data-aos="fade-up" data-aos-duration="1100"></i>
+                        <i class="fab fa-tiktok"data-aos="fade-up" data-aos-duration="1300"></i>
+                        <i class="fab fa-instagram"data-aos="fade-up" data-aos-duration="1500"></i>
+                      </div>
+                    </div>
+              
+                    <!-- Quick Links -->
+                    <div class="col-md-3 quick-links">
+                      <h6>Quick links</h6>
+                      <ul class="list-unstyled">
+                        <li><a href="/allproject.html" >Projects</a></li>
+                        <li><a href="about.html" >About Osus</a></li>
+                        <li><a href="contact.html" >Contact us</a></li>
+                        <li><a href="/allnews.html">News</a></li>
+                      </ul>
+                    </div>
+                    
+              
+                    <!-- Badge -->
+                    <div class="col-md-3 text-md-end gptw-badge">
+                      <img src="assets/footer-img.webp" alt="Great Place To Work Certified Badge">
+                    </div>
+                  </div>
+              
+                  <!-- Footer Bottom -->
+                  <div class="footer-bottom mt-4 mb-0">
+                    <p>All rights reserved. © OSUS Real Estate 2024</p>
+                  </div>
+                </div>
+              </footer>
+              
+             
+              
+            
+            
+                
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+
+<!-- Slick Slider -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- mmenu -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.13/mmenu.min.js"></script>
+
+<!-- Nice Select & Wow & Parallax -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/wow.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+<!-- GSAP (for loading page) -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+
+<!-- FancyBox (for image or video popup) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+<!-- Bootstrap Bundle with Popper (JavaScript) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-Xk/5uHBm6F59Ecf7DzN93ewP2eRTtM0NFdQUz3xv2d+1V/kd+ufPQyM4o5XzY0/ymuwVp6LMTPhvquKeXilrMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Waypoints & CounterUp (for animation) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+<script src="./assets/js/jquery.counterup.min.js"></script>
+
+<!-- Swiper Slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<div class="cursor cursor-large"></div>
+<div class="cursor cursor-small"></div>
+
+
+<script>
+                
+                //Project vedio
+                document.addEventListener("DOMContentLoaded", function() {
+                const video = document.getElementById("projectVideo");
+
+
+                video.addEventListener("click", function() {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            });
+
+
+            //Gallery Slider
+            $(document).ready(function() {
+                // Initialize gallery slider
+                $('.gallery-slider').slick({
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay:true,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    arrows: false, 
+                    responsive: [
+                        { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+                        { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+                    ]
+                });
+
+                $('.custom-prev-gallery').click(function() {
+                    $('.gallery-slider').slick('slickPrev'); 
+                });
+
+                $('.custom-next-gallery').click(function() {
+                    $('.gallery-slider').slick('slickNext'); 
+                });
+
+
+
+                $('.gallery-slider img').click(function() {
+                    const images = $(this).data('popup-images');
+                    const popupSlider = $('.popup-slider');
+
+                    if (popupSlider.hasClass('slick-initialized')) {
+                        popupSlider.slick('unslick');
+                    }
+
+                    popupSlider.empty();
+                    images.forEach(image => {
+                        popupSlider.append(`<div><img src="${image}" alt="Popup Image" /></div>`);
+                    });
+
+                    popupSlider.slick({
+                        infinite: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                    });
+
+                    updateCustomLines(0);
+                    $('#popup').fadeIn();
+                });
+
+                
+                $(document).on('click', '.close-btn-popup', function() {
+                    $('#popup').fadeOut();
+                });
+
+                
+                $('.custom-prev').click(function() {
+                    $('.popup-slider').slick('slickPrev');
+                    const currentSlide = $('.popup-slider').slick('slickCurrentSlide');
+                    updateCustomLines(currentSlide);
+                });
+
+                $('.custom-next').click(function() {
+                    $('.popup-slider').slick('slickNext');
+                    const currentSlide = $('.popup-slider').slick('slickCurrentSlide');
+                    updateCustomLines(currentSlide);
+                });
+
+                function updateCustomLines(activeIndex) {
+                    const lineContainer = $('.custom-lines');
+                    lineContainer.empty();
+                    for (let i = 0; i < $('.popup-slider').slick('getSlick').slideCount; i++) {
+                        const line = $('<div></div>');
+                        if (i === activeIndex) {
+                            line.addClass('active-line');
+                        }
+                        lineContainer.append(line);
+                    }
+                }
+            });
+
+            document.querySelectorAll('.gallery-image-wrapper').forEach(wrapper => {
+                const img = wrapper.querySelector('img');
+                wrapper.style.overflow = 'hidden';
+
+                img.style.transition = "transform 0.5s ease";
+                img.style.transformOrigin = "center";
+
+                wrapper.addEventListener('mouseover', () => {
+                    img.style.transform = "scale(1.2)";
+                });
+
+                wrapper.addEventListener('mouseout', () => {
+                    img.style.transform = "scale(1)";
+                });
+            });
+
+
+
+            //Modal Slider
+            $(document).ready(function(){
+                $('.model-slider').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: false, 
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        },
+                        {
+                            breakpoint: 576,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+
+                // Custom right arrow click event to control the slider
+                $('#custom-arrow-right').click(function() {
+                    $('.model-slider').slick('slickNext');
+                });
+            });
+
+
+
+            // Master Image Animation
+            let isAnimationFrameActive = false;
+
+            window.addEventListener("scroll", function () {
+                if (!isAnimationFrameActive) {
+                    window.requestAnimationFrame(() => {
+                        const masterImage = document.querySelector(".master-image-container .modal-main-image");
+                        const imageRect = masterImage.getBoundingClientRect();
+                        const viewportCenter = window.innerHeight / 2;
+
+                        if (imageRect.top < viewportCenter && imageRect.bottom > 0) {
+                            const zoomFactor = 1 + (viewportCenter - imageRect.top) * 0.0005;
+                            masterImage.style.transform = `translate(0, ${-imageRect.top * 0.1}px) scale(${zoomFactor})`;
+                        } else {
+                            masterImage.style.transform = 'scale(1)';
+                        }
+                        isAnimationFrameActive = false;
+                    });
+                    isAnimationFrameActive = true;
+                }
+            });
+
+            // Counter function to animate numbers
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                counter.innerText = '+0';
+
+                const updateCounter = () => {
+                const target = +counter.getAttribute('data-target');
+                const current = +counter.innerText.replace(/[+,]/g, ''); 
+                const increment = 5; 
+
+                if (current < target) {
+                    counter.innerText = '+' + Math.min(current + increment, target).toLocaleString();
+                    setTimeout(updateCounter, 150);
+                } else {
+                    counter.innerText = '+' + target.toLocaleString();
+                }
+                };
+
+                updateCounter();
+            });
+            //Phone input
+            document.addEventListener("DOMContentLoaded", function() {
+                    const input = document.querySelector("#phone");
+                    window.intlTelInput(input, {
+                        initialCountry: "sa",  
+                        separateDialCode: true, 
+                        autoPlaceholder: "off"
+                    });
+                    });
+
+                    // News Slider
+            $(document).ready(function () {
+            $(".news-slider").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                responsive: [
+                { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                { breakpoint: 768, settings: { slidesToShow: 1 } },
+                ],
+            });
+            });
+
+
+
+            // Slider
+            let tickingNewsCard = false;
+
+            window.addEventListener("scroll", function () {
+                if (!tickingNewsCard) {
+                    window.requestAnimationFrame(() => {
+                        const newsImages = document.querySelectorAll(".news-card img");
+                        newsImages.forEach((img) => {
+                            const speed = 0.3; 
+                            const rect = img.getBoundingClientRect(); 
+                            const middleOfScreen = window.innerHeight / 2; 
+
+                            if (rect.top < middleOfScreen && rect.bottom > 0) {
+                                const scale = 1 + (middleOfScreen - rect.top) * 0.001; 
+                                img.style.transform = `translate(0, ${-rect.top * 0.1}px) scale(${scale})`; 
+                            } else {
+                                img.style.transform = 'scale(1)'; 
+                            }
+                        });
+                        tickingNewsCard = false;
+                    });
+                    tickingNewsCard = true;
+                }
+            });
+
+            AOS.init({
+                once: false, 
+            });
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+      <script src="script.js" defer></script> 
+      <!-- Main Script -->
+      <script src="js/main.js"></script>
+        
+      </body>
+      </html>
+                
+                
+
+
+
+
+
