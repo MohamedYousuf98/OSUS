@@ -300,8 +300,7 @@
                 </div>
               </footer>
               
-             
-
+  
             
                 
             
@@ -359,24 +358,18 @@
             
                        
           <script>
-              let ticking = false;
+   document.querySelectorAll('.inne-n-news-card').forEach(card => {
+  card.addEventListener('mouseover', function() {
+    const img = card.querySelector('img');
+    img.style.transform = 'scale(1.2) translate(10px, 10px)';
+  });
 
-              window.addEventListener("scroll", function () {
-                  if (!ticking) {
-                      window.requestAnimationFrame(() => {
-                          const newsImages = document.querySelectorAll(".inne-n-news-card img");
-                          newsImages.forEach((img) => {
-                              const scaleX = 1 + window.scrollY * 0.0005;
-                              const scaleY = 1 + window.scrollY * 0.001;
-                              img.style.transform = `scale(${scaleX}, ${scaleY})`;
-                          });
-                          ticking = false;
-                      });
-                      ticking = true;
-                  }
-              });
+  card.addEventListener('mouseout', function() {
+    const img = card.querySelector('img');
+    img.style.transform = 'scale(1) translate(0, 0)'; 
+  });
+});
 
-     
             AOS.init({
                 once: false, 
             });

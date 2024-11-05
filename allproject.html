@@ -583,7 +583,7 @@
     </div>
   </footer>
   
-  
+
 
         
     
@@ -644,32 +644,21 @@
 
 
   <script>
-    // All projects effect
-    document.addEventListener("DOMContentLoaded", function () {
-      const parallaxImages = document.querySelectorAll(".project-card img.project-img");
-    
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            const speed = 0.3;
-    
-            // Update the transform based on scroll position
-            const updateTransform = () => {
-              const offset = window.scrollY * speed;
-              img.style.transform = `translate(-50%, -50%) scale(${1 + offset / 1000})`;
-              requestAnimationFrame(updateTransform);
-            };
-    
-            // Start the animation
-            updateTransform();
-          }
-        });
-      });
-    
-      parallaxImages.forEach((img) => observer.observe(img));
-    });
-    
+   
+   document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mouseover', function() {
+    const img = card.querySelector('.project-img');
+    img.style.transform = 'translate(-50%, -50%) scale(1.2)'; 
+  });
+
+  card.addEventListener('mouseout', function() {
+    const img = card.querySelector('.project-img');
+    img.style.transform = 'translate(-50%, -50%) scale(1)'; 
+  });
+});
+
+
+
     // Tabs 
     document.querySelectorAll(".tab").forEach((tab) => {
   tab.addEventListener("click", function () {

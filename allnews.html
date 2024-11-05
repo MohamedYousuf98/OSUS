@@ -417,7 +417,6 @@
 
 
 
-
         
     
 
@@ -477,29 +476,24 @@
   <script>
 document.addEventListener("DOMContentLoaded", function () {
     const newsImages = document.querySelectorAll(".image-wrapper img");
-    const speed = 0.3; 
-    const middleOfScreen = window.innerHeight / 2;
 
     newsImages.forEach((img) => {
         img.addEventListener("mouseenter", () => {
-            const updateTransform = () => {
-                const rect = img.getBoundingClientRect();
-                const scale = 1 + (middleOfScreen - rect.top) * 0.001;
-
-            
-                img.style.transform = `translate(0, ${-rect.top * 0.1}px) scale(${scale})`;
-                img.style.borderRadius = '15px'; 
-                requestAnimationFrame(updateTransform);
-            };
-            updateTransform();
+            // Apply a significant scale on hover
+            img.style.transform = 'scale(1.3)'; // Zoom in effect
+            img.style.borderRadius = '15px';
         });
 
         img.addEventListener("mouseleave", () => {
-            img.style.transform = 'scale(1)';
+            // Reset to original state on hover exit
+            img.style.transform = 'scale(1)'; // Zoom out effect
             img.style.borderRadius = '15px'; 
         });
     });
 });
+ 
+
+
 
   <!-- Initialize AOS -->
   AOS.init({

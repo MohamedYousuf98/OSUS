@@ -333,31 +333,34 @@
   
  
      <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const newsImages = document.querySelectorAll(".vision-image-inner");
-        
-                    const updateScale = () => {
-                        const middleOfScreen = window.innerHeight / 2;
-                        newsImages.forEach((img) => {
-                            const rect = img.getBoundingClientRect();
-                            if (rect.top < middleOfScreen && rect.bottom > 0) {
-                                // Calculate scale to shrink the image from the center
-                                const scaleY = 1 - (middleOfScreen - rect.top) * 0.0005; // Decrease scale
-                                img.style.transform = `scale(${scaleY})`;
-                            } else {
-                                img.style.transform = 'scale(1)'; 
-                            }
-                        });
-                    };
-        
-                    // Initial scale update
-                    updateScale();
-        
-                    // Update on scroll with requestAnimationFrame
-                    window.addEventListener("scroll", () => {
-                        requestAnimationFrame(updateScale);
-                    });
-                });
+      document.addEventListener("DOMContentLoaded", function () {
+    const newsImages = document.querySelectorAll(".vision-image-inner");
+
+    const updateScale = () => {
+        const middleOfScreen = window.innerHeight / 2;
+        newsImages.forEach((img) => {
+            const rect = img.getBoundingClientRect();
+            if (rect.top < middleOfScreen && rect.bottom > 0) {
+                // Calculate scale to shrink the image from the center
+                const scaleY = 1 - (middleOfScreen - rect.top) * 0.0001; // Decrease scale factor
+                img.style.transform = `scale(${scaleY})`;
+                img.style.borderRadius = '20px'; // Keep border-radius during scale
+            } else {
+                img.style.transform = 'scale(1)'; 
+                img.style.borderRadius = '20px'; // Reset border-radius
+            }
+        });
+    };
+
+    // Initial scale update
+    updateScale();
+
+    // Update on scroll with requestAnimationFrame
+    window.addEventListener("scroll", () => {
+        requestAnimationFrame(updateScale);
+    });
+});
+
           
             <!-- Initialize AOS -->
             AOS.init({
