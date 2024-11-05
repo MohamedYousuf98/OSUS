@@ -318,28 +318,27 @@
 </div>
 
 
-<div class="container my-5  ">
-    <div class="row modal-section align-items-left ">
-        <div class="col-md-4 text-start"data-aos="fade-up" data-aos-duration="900"> 
+<div class="container my-5">
+    <div class="row modal-section align-items-left" style="display: flex; align-items: center;">
+        <div class="col-md-4 text-start" data-aos="fade-up" data-aos-duration="900"> 
             <h2>Types of models</h2>
             <p>Housing 14 is located in the vibrant artery of the East, which is the most popular among residents of Riyadh.</p>
-            <a href="#" class="list-modals-btn  btn btn-primary d-flex align-items-left" style="width: 190px;"data-aos="fade-up" data-aos-duration="900">
+            <a href="#" class="list-modals-btn btn btn-primary d-flex align-items-left" style="width: 190px;" data-aos="fade-up" data-aos-duration="900">
                 List of models
                 <img src="assets/arrow-down.svg" alt="" class="ms-2">
-
             </a>
         </div>
-        <div class="col-md-8 position-relative">
-            <div class="model-slider">
-                <div class="model-slide"data-aos="fade-up" data-aos-duration="700">
+        <div class="col-md-7 position-relative" style="flex: 1;">
+            <div class="model-slider" style="display: flex; overflow: hidden;">
+                <div class="model-slide" data-aos="fade-up" data-aos-duration="700">
                     <img src="assets/model1.webp" alt="Model A">
                     <div class="overlay-modal">Model A</div>
                 </div>
-                <div class="model-slide"data-aos="fade-up" data-aos-duration="1000">
+                <div class="model-slide" data-aos="fade-up" data-aos-duration="1000">
                     <img src="assets/model2.webp" alt="Model B">
                     <div class="overlay-modal">Model B</div>
                 </div>
-                <div class="model-slide"data-aos="fade-up" data-aos-duration="1300">
+                <div class="model-slide" data-aos="fade-up" data-aos-duration="1300">
                     <img src="assets/model3.webp" alt="Model C">
                     <div class="overlay-modal">Model C</div>
                 </div>
@@ -352,7 +351,9 @@
                     <div class="overlay-modal">Model E</div>
                 </div>
             </div>
-            <img src="assets/arrow-right.svg" alt="Next" id="custom-arrow-right" class="custom-arrow arrow-desktop-only"data-aos="fade-up" data-aos-duration="1400">
+        </div>
+        <div class="col-md-1">
+            <img src="assets/arrow-right.svg" alt="Next" id="custom-arrow-right" class="custom-arrow-modal arrow-desktop-only" data-aos="fade-up" data-aos-duration="1400">
         </div>
     </div>
 </div>
@@ -513,6 +514,12 @@
     </div>
   </div>
   </div>
+
+  <style>
+    .iti__country {
+    font-size: 12px !important; /* حجم الخط للعناصر في القائمة المنسدلة */
+}
+  </style>
   
   <div class="image-register">
     <div class="container image-overlay-container">
@@ -524,7 +531,7 @@
                 <form class="w-100">
                     <input type="text" class="form-control input-field mb-4" placeholder="Your Name">
                     <input type="email" class="form-control input-field mb-4" placeholder="Email">
-                    <input type="tel" id="phone" class="form-control input-field phone-input mb-4" placeholder="Phone Number">
+                    <input type="tel" id="phone" class="form-control input-field phone-input mb-4" placeholder="  Phone Number">
                     <button type="submit" class="btn btn-contact mt-4">Send Message</button>
                 </form>
             </div>
@@ -862,7 +869,7 @@
                 slidesToScroll: 1,
                 dots: false,
                 infinite: true,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 2000,
                 arrows: false,
                 responsive: [

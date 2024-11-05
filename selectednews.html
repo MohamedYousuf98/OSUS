@@ -311,29 +311,19 @@
 
             <script>
                          
-                let tickingNewsCard = false;
+                         document.addEventListener("DOMContentLoaded", function () {
+                        const osnImage = document.querySelector(".osn-image img");
 
-                window.addEventListener("scroll", function () {
-                    if (!tickingNewsCard) {
-                        window.requestAnimationFrame(() => {
-                            const newsImages = document.querySelectorAll(".osn-image img");
-                            newsImages.forEach((img) => {
-                                const speed = 0.3; 
-                                const rect = img.getBoundingClientRect(); 
-                                const middleOfScreen = window.innerHeight / 2; 
-
-                                if (rect.top < middleOfScreen && rect.bottom > 0) {
-                                    const scale = 1 + (middleOfScreen - rect.top) * 0.001; 
-                                    img.style.transform = `translate(0, ${-rect.top * 0.1}px) scale(${scale})`; 
-                                } else {
-                                    img.style.transform = 'scale(1)'; 
-                                }
-                            });
-                            tickingNewsCard = false;
+                   
+                        osnImage.addEventListener("mouseenter", () => {
+                            osnImage.style.transform = "scale(1.1)"; 
                         });
-                        tickingNewsCard = true;
-                    }
-                });
+                        osnImage.addEventListener("mouseleave", () => {
+                            osnImage.style.transform = "scale(1)";
+                        });         
+                        });
+
+
 
                     const video = document.getElementById('backgroundVideo');
                     const playButton = document.getElementById('playButton');
@@ -352,8 +342,8 @@
                     playButton.addEventListener('click', toggleVideo);
                     video.addEventListener('click', toggleVideo);
    
-        AOS.init({
-            once: false, 
+                AOS.init({
+                    once: false, 
         });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
