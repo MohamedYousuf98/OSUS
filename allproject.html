@@ -533,9 +533,7 @@
             <a href="/index.html" target="_blank">
                 <img src="assets/footer-logo.webp" alt="OSUS Logo" class="footer-logo">
             </a>
-            
-  
-       
+ 
           <p class="company-description"data-aos="fade-up" data-aos-duration="800">
             Osus Real Estate is a Saudi Real Estate Development Company based in Riyadh. Founded in 2006, we endeavour to craft profitable and iconic projects ranging from residential, commercial, hospitality, and raw lands.
           </p>
@@ -645,43 +643,43 @@
 
   <script>
    
-   document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mouseover', function() {
-    const img = card.querySelector('.project-img');
-    img.style.transform = 'translate(-50%, -50%) scale(1.2)'; 
-  });
+    document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseover', function() {
+        const img = card.querySelector('.project-img');
+        img.style.transform = 'translate(-50%, -50%) scale(1.2)'; 
+    });
 
-  card.addEventListener('mouseout', function() {
-    const img = card.querySelector('.project-img');
-    img.style.transform = 'translate(-50%, -50%) scale(1)'; 
-  });
-});
+    card.addEventListener('mouseout', function() {
+        const img = card.querySelector('.project-img');
+        img.style.transform = 'translate(-50%, -50%) scale(1)'; 
+    });
+    });
 
 
 
-    // Tabs 
-    document.querySelectorAll(".tab").forEach((tab) => {
-  tab.addEventListener("click", function () {
-    document
-      .querySelectorAll(".tab")
-      .forEach((t) => t.classList.remove("active"));
-    tab.classList.add("active");
+        // Tabs 
+        document.querySelectorAll(".tab").forEach((tab) => {
+    tab.addEventListener("click", function () {
+        document
+        .querySelectorAll(".tab")
+        .forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
 
-    document
-      .querySelectorAll(".content")
-      .forEach((content) => content.classList.remove("active"));
-    document
-      .getElementById(tab.getAttribute("data-tab"))
-      .classList.add("active");
-  });
-});
+        document
+        .querySelectorAll(".content")
+        .forEach((content) => content.classList.remove("active"));
+        document
+        .getElementById(tab.getAttribute("data-tab"))
+        .classList.add("active");
+    });
+    });
 
-    
-  <!-- Initialize AOS -->
-  AOS.init({
-    once: false, 
-  });
-  </script>
+        
+    <!-- Initialize AOS -->
+    AOS.init({
+        once: false, 
+    });
+    </script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
   <script src="script.js" defer></script> 

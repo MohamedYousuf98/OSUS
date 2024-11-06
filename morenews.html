@@ -358,17 +358,17 @@
             
                        
           <script>
-   document.querySelectorAll('.inne-n-news-card').forEach(card => {
-  card.addEventListener('mouseover', function() {
-    const img = card.querySelector('img');
-    img.style.transform = 'scale(1.2) translate(10px, 10px)';
-  });
+                document.querySelectorAll('.inne-n-news-card').forEach(card => {
+                card.addEventListener('mouseover', function() {
+                    const img = card.querySelector('img');
+                    img.style.transform = 'scale(1.2) translate(10px, 10px)';
+                });
 
-  card.addEventListener('mouseout', function() {
-    const img = card.querySelector('img');
-    img.style.transform = 'scale(1) translate(0, 0)'; 
-  });
-});
+                card.addEventListener('mouseout', function() {
+                    const img = card.querySelector('img');
+                    img.style.transform = 'scale(1) translate(0, 0)'; 
+                });
+                });
 
             AOS.init({
                 once: false, 
