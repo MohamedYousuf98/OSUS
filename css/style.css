@@ -225,7 +225,7 @@ main {
 }
 
 .close-btn-menu {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 20px;
   font-size: 36px;
@@ -260,6 +260,7 @@ main {
     right: 10px;
   }
 }
+
 
 
 
@@ -904,22 +905,23 @@ main {
 /*------------------------Crafting---------------------------------*/
 .crafting {
   position: relative;
-  height: 650px;
+  height: 100vh;
   background-image: url("../assets/crafting.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 7%;
 }
+
 @media only screen and (max-width: 768px) {
   .crafting {
-    background-attachment: fixed !important;
+    background-position: center top;
   }
 }
+
 
 /* Overlay layer */
 .crafting::before {

@@ -602,6 +602,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//crafting  affect for mobile 
+window.addEventListener('scroll', function() {
+  let scrolled = window.pageYOffset; 
+  let craftingElement = document.querySelector('.crafting');
+  craftingElement.style.backgroundPosition = 'center ' + (scrolled * 0.5) + 'px'; 
+});
+
 
 AOS.init({
   once: false, 
