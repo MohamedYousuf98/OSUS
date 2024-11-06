@@ -231,12 +231,13 @@ main {
   font-size: 36px;
   cursor: pointer;
   color: #fff;
-  border-radius: 50%;
+  border-radius: 50px;
   background-color: #C5AA84;
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   transition: all 0.3s ease;
 }
@@ -905,23 +906,22 @@ main {
 /*------------------------Crafting---------------------------------*/
 .crafting {
   position: relative;
-  height: 100vh;
+  height: 650px;
   background-image: url("../assets/crafting.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 7%;
 }
-
 @media only screen and (max-width: 768px) {
   .crafting {
-    background-position: center top;
+    background-attachment: scroll !important;
   }
 }
-
 
 /* Overlay layer */
 .crafting::before {
