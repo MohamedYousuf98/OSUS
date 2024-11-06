@@ -71,7 +71,7 @@
             
             <!-- Slide Menu (Appears on both Mobile and Desktop) -->
             <div id="sideMenu" class="side-menu ">
-                <div class="close-btn-popup" onclick="closeMenu()">&times;</div>
+                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
                 <div class="container ">
                     <div class="row navbar-content mt-5">
                         <!-- Left Side (Menu) -->
@@ -273,51 +273,54 @@
 </section>
 
 
-
 <section class="gallery-section">
- <div class="container"data-aos="fade-up" data-aos-duration="900">
-  <h2 class="gallery-title">Gallery</h2>
-  <p class="gallery-subtitle">Live will be easy and comfortable with OSUS amenities</p>
-
-  <!-- Slider Container -->
-<div class="gallery-slider">
-    <div class="gallery-image-wrapper">
-        <img src="assets/slid1.webp" alt="Image 1" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro2.webp", "assets/allcardpro1.webp"]' />
+    <div class="container" data-aos="fade-up" data-aos-duration="900">
+      <h2 class="gallery-title">Gallery</h2>
+      <p class="gallery-subtitle">Live will be easy and comfortable with OSUS amenities</p>
+  
+      <!-- Slider Container -->
+      <div class="gallery-slider">
+        <div class="gallery-image-wrapper">
+          <img src="assets/slid1.webp" alt="Image 1" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro2.webp", "assets/allcardpro1.webp"]' />
+        </div>
+        <div class="gallery-image-wrapper">
+          <img src="assets/slid2.webp" alt="Image 2" data-popup-images='["assets/allcardpro4.webp", "assets/allcardpro5.webp", "assets/allcardpro6.webp"]' />
+        </div>
+        <div class="gallery-image-wrapper">
+          <img src="assets/slid3.webp" alt="Image 3" data-popup-images='["assets/allcardpro7.webp", "assets/allcardpro5.webp", "assets/allcardpro1.webp"]' />
+        </div>
+        <div class="gallery-image-wrapper">
+          <img src="assets/slid4.webp" alt="Image 4" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro4.webp", "assets/allcardpro6.webp"]' />
+        </div>
+      </div>
+  
+      <!-- Custom Arrow Controls -->
+      <div class="custom-arrows">
+        <img src="assets/arrowleftinproject.svg" class="custom-prev-gallery" alt="Previous Slide">
+        <img src="assets/arrow-right.svg" class="custom-next-gallery" alt="Next Slide">
+      </div>
     </div>
-    <div class="gallery-image-wrapper">
-        <img src="assets/slid2.webp" alt="Image 2" data-popup-images='["assets/allcardpro4.webp", "assets/allcardpro5.webp", "assets/allcardpro6.webp"]' />
-    </div>
-    <div class="gallery-image-wrapper">
-        <img src="assets/slid3.webp" alt="Image 3" data-popup-images='["assets/allcardpro7.webp", "assets/allcardpro5.webp", "assets/allcardpro1.webp"]' />
-    </div>
-    <div class="gallery-image-wrapper">
-        <img src="assets/slid4.webp" alt="Image 4" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro4.webp", "assets/allcardpro6.webp"]' />
-    </div>
-</div>
-
-
-  <!-- Custom Arrow Controls -->
-  <div class="custom-arrows">
-      <img src="assets/arrowleftinproject.svg" class="custom-prev-gallery" alt="Previous Slide">
-      <img src="assets/arrow-right.svg" class="custom-next-gallery" alt="Next Slide">
-  </div>
-  </div>
-</section>
-
-<!-- Popup Slider -->
-<div id="popup" style="display: none;">
-  <div class="popup-content">
+  </section>
+  
+  <!-- Popup Slider -->
+  <div id="popup" style="display: none;">
+    <div class="popup-content">
       <span class="close-btn-popup">&times;</span>
       <div class="popup-slider"></div>
-      <div class="custom-lines"></div>
       <div class="custom-controls">
-          <div class="custom-prev"><img src="assets/arrowleftinproject.svg"></div>
-          <div class="custom-next"><img src="assets/arrow-right.svg"></div>
+        <div class="custom-prev"><img src="assets/arrowleftinproject.svg"></div>
+        <div class="custom-lines">
+          <div class="line"></div>
+          <div class="line active-line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="custom-next"><img src="assets/arrow-right.svg"></div>
       </div>
+    </div>
   </div>
-</div>
+  
 
-
+  
 <div class="container my-5">
     <div class="row modal-section align-items-left" style="display: flex; align-items: center;">
         <div class="col-md-4 text-start" data-aos="fade-up" data-aos-duration="900"> 
@@ -390,7 +393,7 @@
 <div class="news-section-project ">
   <div class="container">
       <div class="row justify-content-center">
-          <div class="news-header">
+          <div class="news-header mt-4">
               <h2>Latest Construction Updates</h2>
               <p>be updated with OSUS news</p>
           </div>
@@ -515,11 +518,7 @@
   </div>
   </div>
 
-  <style>
-    .iti__country {
-    font-size: 12px !important; /* حجم الخط للعناصر في القائمة المنسدلة */
-}
-  </style>
+
   
   <div class="image-register">
     <div class="container image-overlay-container">

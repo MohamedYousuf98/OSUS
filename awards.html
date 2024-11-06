@@ -67,7 +67,7 @@
             
             <!-- Slide Menu (Appears on both Mobile and Desktop) -->
             <div id="sideMenu" class="side-menu ">
-                <div class="close-btn" onclick="closeMenu()">&times;</div>
+                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
                 <div class="container ">
                     <div class="row navbar-content mt-5">
                         <!-- Left Side (Menu) -->
@@ -287,39 +287,42 @@
   
   <script>
   
-    document.addEventListener("DOMContentLoaded", function () {
-        const newsImages = document.querySelectorAll(".award-card img");
-    
-        // Function to animate image
-        function animateImage(img) {
-            let positionY = 0;
-            let direction = 1;
-    
-            // Update position for animation
-            function update() {
-                positionY += direction;
-                if (positionY > 30 || positionY < -30) direction *= -1; // Reverse direction
-                img.style.transform = `translateY(${positionY}px)`;
-                requestAnimationFrame(update);
-            }
-    
-            requestAnimationFrame(update);
+  document.addEventListener("DOMContentLoaded", function () {
+    const newsImages = document.querySelectorAll(".award-card img");
+
+    // Function to animate image on hover
+    function animateImage(img) {
+        let positionY = 0;
+        let direction = 0.5;
+        let animationFrameId;
+
+        // Update position for animation
+        function update() {
+            positionY += direction;
+            if (positionY > 15 || positionY < -15) direction *= -1;
+            img.style.transform = `translateY(${positionY}px)`;
+            animationFrameId = requestAnimationFrame(update);
         }
-    
-        // Intersection observer to trigger animation when images are visible
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateImage(entry.target);
-                    observer.unobserve(entry.target); // Stop observing after animation starts
-                }
-            });
-        }, { threshold: 0.1 });
-    
-        // Observe each image
-        newsImages.forEach(img => observer.observe(img));
-    });
-   
+
+        // Start animation on hover
+        img.addEventListener("mouseenter", () => {
+            img.style.transition = "none"; // Disable transition on start of hover
+            update();
+        });
+
+        // Stop animation when hover ends
+        img.addEventListener("mouseleave", () => {
+            cancelAnimationFrame(animationFrameId);
+            img.style.transition = "transform 0.3s ease"; 
+            img.style.transform = `translateY(0)`;
+            positionY = 0; 
+        });
+    }
+
+    // Apply hover animation to each image
+    newsImages.forEach(img => animateImage(img));
+});
+
 
 
   AOS.init({

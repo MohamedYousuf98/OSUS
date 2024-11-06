@@ -27,9 +27,130 @@
 </div>
 
 
+<div class="container my-5">
+    <div class="row modal-section align-items-left" style="display: flex; align-items: center;">
+        <div class="col-md-4 text-start" data-aos="fade-up" data-aos-duration="900"> 
+            <h2>Types of models</h2>
+            <p>Housing 14 is located in the vibrant artery of the East, which is the most popular among residents of Riyadh.</p>
+            <a href="#" class="list-modals-btn btn btn-primary d-flex align-items-left" style="width: 190px;" data-aos="fade-up" data-aos-duration="900">
+                List of models
+                <img src="assets/arrow-down.svg" alt="" class="ms-2">
+            </a>
+        </div>
+ <div class="col-md-7 position-relative" style="flex: 1;">
+    <div class="model-slider" style="display: flex; overflow: hidden;">
+        <div class="model-slide" data-aos="fade-up" data-aos-duration="700">
+            <img src="assets/model1.webp" alt="Model A" class="popup-trigger" data-title="Model A">
+            <div class="overlay-modal">Model A</div>
+        </div>
+        <div class="model-slide" data-aos="fade-up" data-aos-duration="1000">
+            <img src="assets/model2.webp" alt="Model B" class="popup-trigger" data-title="Model B">
+            <div class="overlay-modal">Model B</div>
+        </div>
+        <div class="model-slide" data-aos="fade-up" data-aos-duration="1300">
+            <img src="assets/model3.webp" alt="Model C" class="popup-trigger" data-title="Model C">
+            <div class="overlay-modal">Model C</div>
+        </div>
+        <div class="model-slide">
+            <img src="assets/model2.webp" alt="Model D" class="popup-trigger" data-title="Model D">
+            <div class="overlay-modal">Model D</div>
+        </div>
+        <div class="model-slide">
+            <img src="assets/model1.webp" alt="Model E" class="popup-trigger" data-title="Model E">
+            <div class="overlay-modal">Model E</div>
+        </div>
+    </div>
+</div>
 
+<!-- Popup Modal Structure -->
+<div class="custom-popup-overlay" id="popupOverlay" style="display: none;">
+    <div class="custom-popup-content">
+        <span class="close-popup">&times;</span>
+        <img src="" alt="Model Image" id="popupImage">
+        <h3 id="popupTitle"></h3>
+    </div>
+</div>
 
+<script>
+document.querySelectorAll('.popup-trigger').forEach(item => {
+    item.addEventListener('click', event => {
+        const imageSrc = event.target.src;
+        const imageTitle = event.target.dataset.title;
 
+        // Set popup content
+        document.getElementById('popupImage').src = imageSrc;
+        document.getElementById('popupTitle').textContent = imageTitle;
+
+        // Show popup
+        document.getElementById('popupOverlay').style.display = 'flex';
+    });
+});
+
+// Close popup
+document.querySelector('.close-popup').addEventListener('click', () => {
+    document.getElementById('popupOverlay').style.display = 'none';
+});
+
+// Close popup when clicking outside of content
+document.getElementById('popupOverlay').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('popupOverlay')) {
+        document.getElementById('popupOverlay').style.display = 'none';
+    }
+});
+</script>
+
+        <div class="col-md-1">
+            <img src="assets/arrow-right.svg" alt="Next" id="custom-arrow-right" class="custom-arrow-modal arrow-desktop-only" data-aos="fade-up" data-aos-duration="1400">
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.custom-popup-content {
+    background: #fff;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.custom-popup-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.custom-popup-content h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+</style>
 <!-- Bootstrap JS and dependencies (optional) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

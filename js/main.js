@@ -286,3 +286,4 @@ function toggleVideo() {
 }
 playButton.addEventListener("click", toggleVideo);
 video.addEventListener("click", toggleVideo);
+

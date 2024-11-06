@@ -71,7 +71,7 @@
             
             <!-- Slide Menu (Appears on both Mobile and Desktop) -->
             <div id="sideMenu" class="side-menu ">
-                <div class="close-btn" onclick="closeMenu()">&times;</div>
+                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
                 <div class="container ">
                     <div class="row navbar-content mt-5">
                         <!-- Left Side (Menu) -->
@@ -143,7 +143,7 @@
                       <form class="w-100">
                           <input type="text" class="form-control input-field mb-4" placeholder="Your Name">
                           <input type="email" class="form-control input-field mb-4" placeholder="Email">
-                          <input type="tel" id="phone" class="form-control input-field phone-input mb-4" placeholder="Phone Number">
+                          <input type="tel" id="phone" class="form-control input-field phone-input mb-4" placeholder="   Phone Number">
                           <textarea class="form-control input-field mb-4 mt-4" rows="4" placeholder="Send your message here"></textarea>
                           <button type="submit" class="btn btn-contact">Send Message</button>
                       </form>
@@ -374,36 +374,18 @@
 
 <script>
 
-  
-    let ticking = false; // Flag to prevent multiple executions of the animation frame
-    
-    window.addEventListener("scroll", function () {
-        if (!ticking) {
-            ticking = true; // Set the flag to indicate that an animation frame is being processed
-    
-            requestAnimationFrame(() => {
-                const newsImages = document.querySelectorAll(".location-map img");
-                const middleOfScreen = window.innerHeight / 2;
-    
-                newsImages.forEach((img) => {
-                    const rect = img.getBoundingClientRect(); 
-    
-                    // Check if the image is within the viewport
-                    if (rect.top < middleOfScreen && rect.bottom > 0) {
-                        // Calculate the scaling factor based on scroll position
-                        const scale = 1 + (middleOfScreen - rect.top) * 0.001;
-                        
-                        // Apply the transformation with hardware acceleration
-                        img.style.transform = `scale(${scale}) translateZ(0)`; 
-                    } else {
-                        img.style.transform = 'scale(1)'; // Reset to default scale when out of view
-                    }
-                });
-    
-                ticking = false; // Reset the flag to allow the next animation frame
-            });
-        }
+    document.addEventListener("DOMContentLoaded", function () {
+      const img = document.querySelector(".image-container img");
+
+      img.addEventListener("mouseenter", () => {
+        img.style.transform = "scale(1.1)"; 
+      });
+
+      img.addEventListener("mouseleave", () => {
+        img.style.transform = "scale(1)";
+      });
     });
+
   
     
     document.addEventListener("DOMContentLoaded", function() {

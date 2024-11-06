@@ -67,7 +67,7 @@
             
             <!-- Slide Menu (Appears on both Mobile and Desktop) -->
             <div id="sideMenu" class="side-menu ">
-                <div class="close-btn" onclick="closeMenu()">&times;</div>
+                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
                 <div class="container ">
                     <div class="row navbar-content mt-5">
                         <!-- Left Side (Menu) -->
@@ -415,8 +415,6 @@
 
 
 
-
-
         
     
 
@@ -479,19 +477,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     newsImages.forEach((img) => {
         img.addEventListener("mouseenter", () => {
-            // Apply a significant scale on hover
-            img.style.transform = 'scale(1.3)'; // Zoom in effect
+          
+            img.style.transform = 'scale(1.3)'; 
             img.style.borderRadius = '15px';
         });
 
         img.addEventListener("mouseleave", () => {
-            // Reset to original state on hover exit
-            img.style.transform = 'scale(1)'; // Zoom out effect
-            img.style.borderRadius = '15px'; 
+           
+            img.style.transform = 'scale(1)'; 
+            img.style.borderRadius = '15px';
         });
     });
 });
- 
 
 
 
