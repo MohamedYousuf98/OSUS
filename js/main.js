@@ -143,6 +143,7 @@ $(document).ready(function () {
 });
 
 // Video Animation
+
 document.addEventListener("DOMContentLoaded", () => {
   const videoContainer = document.querySelector(".video-container");
 
@@ -286,4 +287,50 @@ function toggleVideo() {
 }
 playButton.addEventListener("click", toggleVideo);
 video.addEventListener("click", toggleVideo);
+
+// header home slider
+$(document).ready(function () {
+  $(".slider-vedio-img").slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+    ],
+  });
+});
+
+// Function to update the displayed language
+function setLanguage(language) {
+  const languageLabel = document.getElementById("selected-language");
+  if (language === "en") {
+    languageLabel.textContent = "English";
+  } else if (language === "ar") {
+    languageLabel.textContent = "العربية";
+  }
+}
 

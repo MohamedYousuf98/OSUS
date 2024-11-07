@@ -37,84 +37,86 @@
 
  
 
-        <nav class="navbar bg-white pt-3 pb-3">
-                <div class="container d-flex justify-content-between align-items-center">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/logo.webp" alt="Logo">
-                    </a>
-            
-                    <!-- Globe icon and menu button aligned next to each other on one line -->
-                    <ul class="navbar-nav d-flex flex-row align-items-center">
-                           <!-- Menu button -->
-                           <li class="nav-item">
-                                <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
-                                    <i class="fas fa-bars mr-2 "></i> 
-                                <span style="font-weight: 600; margin-left: 10px;">Menu</span>
-                            </button>
-                        </li>
-
-                        <!-- Globe icon -->
-                        <li class="nav-item">
-                          <a class="nav-link text-dark" href="#">
-                              <i class="fas fa-globe ml-2"></i>
-                          </a>
-                          <div class="dropdown-content">
-                              <a href="#" onclick="setLanguage('en')">English</a>
-                              <a href="#" onclick="setLanguage('ar')">العربية</a>
-                          </div>
-                      </li>
-                    </ul>
-                </div>
-            </nav>
-            
+    <nav class="navbar bg-white pt-3 pb-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.webp" alt="Logo">
+            </a>
     
-            
-            <!-- Slide Menu (Appears on both Mobile and Desktop) -->
-            <div id="sideMenu" class="side-menu ">
-                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
-                <div class="container ">
-                    <div class="row navbar-content mt-5">
-                        <!-- Left Side (Menu) -->
-                        <div class="col-md-6 side-menu-left">
-                            <div class="side-menu-content ">
-                                <ul class="menu-list ">
-                                  <li><a href="/index.html">Home <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="/allproject.html">Projects <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="about.html">About Osus <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
-                                </ul>
+            <!-- Globe icon and menu button aligned next to each other on one line -->
+            <ul class="navbar-nav d-flex flex-row align-items-center">
+                   <!-- Menu button -->
+                   <li class="nav-item">
+                        <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
+                            <i class="fas fa-bars mr-2 "></i> 
+                        <span style="font-weight: 600; margin-left: 10px;">Menu</span>
+                    </button>
+              <!-- Globe icon with styled selected language label -->
+              <li class="nav-item">
+                <a class="nav-link text-dark d-flex align-items-center" href="#">
+                  <i class="fas fa-globe ml-2"></i>
+                  <span id="selected-language" class="language-label">English</span>
+                </a>
+                <div class="dropdown-content">
+                  <a href="#" onclick="setLanguage('en')">English</a>
+                  <a href="#" onclick="setLanguage('ar')">العربية</a>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    
+    <!-- Slide Menu (Appears on both Mobile and Desktop) -->
+    <div id="sideMenu" class="side-menu ">
+        <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
+        <div class="container ">
+            <div class="row navbar-content mt-5">
+                <!-- Left Side (Menu) -->
+                <div class="col-md-6 side-menu-left">
+                    <div class="side-menu-content ">
+                        <ul class="menu-list ">
+                                <li><a href="/index.html">Home <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="/allproject.html">Projects <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="about.html">About Osus <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="Teams.html">Teams <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+              
+                <!-- Right Side (Logo and Info) -->
+                <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
+                    <div class="logo-navbar-section">
+                        <img src="assets/Group 1261156266.webp" alt="Osus Logo" class="osus-logo">
+                        <div class="contact-info">
+                          <p>
+                            <a href="/allproject.html" class="nav-link-menu">Projects</a> &nbsp;&nbsp;
+                            <a href="/contact.html" class="nav-link-menu">Contact Us</a> &nbsp;&nbsp;
+                            <a href="/PrivacyPolicy.html" class="nav-link-menu">Privacy & Terms</a>
+                          </p>
+                           <h4><a href="mailto:Contact@Osusdev.com">Contact@Osusdev.com</a></h4>
+                                <h3>Working hours</h3>
+                                <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
+                                <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
                             </div>
-                        </div>
-                      
-                        <!-- Right Side (Logo and Info) -->
-                        <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
-                            <div class="logo-navbar-section">
-                                <img src="assets/Group 1261156266.webp" alt="Osus Logo" class="osus-logo">
-                                <div class="contact-info">
-                                        <p>Projects &nbsp;&nbsp; Facility management &nbsp;&nbsp; Contact Us</p>
-                                        <p>Privacy & Terms</p>
-                                        <h4>Contact@Osusdev.com</h4>
-                                        <h3>Working hours</h3>
-                                        <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
-                                        <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
-                                    </div>
-                                    
-                                <div class="social-icons mt-4">
-                                    <i class="fab fa-facebook"></i>
-                                    <i class="fab fa-twitter"></i>
-                                    <i class="fab fa-youtube"></i>
-                                    <i class="fab fa-linkedin"></i>
-                                    <i class="fab fa-tiktok"></i>
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </div>
+                        <div class="social-icons mt-4">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-tiktok"></i>
+                            <i class="fab fa-instagram"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+
 
 
 
@@ -138,7 +140,11 @@
                 Download Brochure
                 <img src="assets/arrow-down.svg" alt="" class="ms-2"> 
             </a>
-        </div>
+            <div id="register-interest" class="register-interest mt-5">
+                <img id="happy-icon" src="assets/happy-icon.svg" alt="Happy Icon" class="happy-icon" />
+                <p id="interest-text" class="interest-text">Register Interest</p>
+            </div>
+          </div>
         </div>
 
 
@@ -267,38 +273,41 @@
                     Download Brochure
                     <img src="assets/arrow-down.svg" alt="" class="ms-2"> 
                 </a>
+                
             </div>
             </section>
 
 
             <section class="gallery-section">
                 <div class="container" data-aos="fade-up" data-aos-duration="900">
-                <h2 class="gallery-title">Gallery</h2>
-                <p class="gallery-subtitle">Live will be easy and comfortable with OSUS amenities</p>
+                    <h2 class="gallery-title">Gallery</h2>
+                    <p class="gallery-subtitle">Live will be easy and comfortable with OSUS amenities</p>
             
-                <!-- Slider Container -->
-                <div class="gallery-slider">
-                    <div class="gallery-image-wrapper">
-                    <img src="assets/slid1.webp" alt="Image 1" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro2.webp", "assets/allcardpro1.webp"]' />
+                    <!-- Slider Container -->
+                    <div class="gallery-slider">
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/slid1.webp" alt="Image 1" />
+                        </div>
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/slid2.webp" alt="Image 2" />
+                        </div>
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/slid3.webp" alt="Image 3" />
+                        </div>
+                        <div class="gallery-image-wrapper">
+                            <img src="assets/slid3.webp" alt="Image 3" />
+                        </div>
+                       
                     </div>
-                    <div class="gallery-image-wrapper">
-                    <img src="assets/slid2.webp" alt="Image 2" data-popup-images='["assets/allcardpro4.webp", "assets/allcardpro5.webp", "assets/allcardpro6.webp"]' />
-                    </div>
-                    <div class="gallery-image-wrapper">
-                    <img src="assets/slid3.webp" alt="Image 3" data-popup-images='["assets/allcardpro7.webp", "assets/allcardpro5.webp", "assets/allcardpro1.webp"]' />
-                    </div>
-                    <div class="gallery-image-wrapper">
-                    <img src="assets/slid4.webp" alt="Image 4" data-popup-images='["assets/allcardpro3.webp", "assets/allcardpro4.webp", "assets/allcardpro6.webp"]' />
-                    </div>
-                </div>
             
-                <!-- Custom Arrow Controls -->
-                <div class="custom-arrows">
-                    <img src="assets/arrowleftinproject.svg" class="custom-prev-gallery" alt="Previous Slide">
-                    <img src="assets/arrow-right.svg" class="custom-next-gallery" alt="Next Slide">
-                </div>
+                    <!-- Custom Arrow Controls -->
+                    <div class="custom-arrows">
+                        <img src="assets/arrowleftinproject.svg" class="custom-prev-gallery" alt="Previous Slide">
+                        <img src="assets/arrow-right.svg" class="custom-next-gallery" alt="Next Slide">
+                    </div>
                 </div>
             </section>
+            
             
             <!-- Popup Slider -->
             <div id="popup" style="display: none;">
@@ -317,50 +326,58 @@
                 </div>
             </div>
             
-
-            
             <div class="container my-5">
                 <div class="row modal-section align-items-left" style="display: flex; align-items: center;">
-                    <div class="col-md-4 text-start" data-aos="fade-up" data-aos-duration="900"> 
+                    <div class="col-md-4 text-start"> 
                         <h2>Types of models</h2>
                         <p>Housing 14 is located in the vibrant artery of the East, which is the most popular among residents of Riyadh.</p>
-                        <a href="#" class="list-modals-btn btn btn-primary d-flex align-items-left" style="width: 190px;" data-aos="fade-up" data-aos-duration="900">
+                        <a href="#" class="list-modals-btn btn btn-primary d-flex align-items-left" style="width: 190px;">
                             List of models
                             <img src="assets/arrow-down.svg" alt="" class="ms-2">
                         </a>
                     </div>
                     <div class="col-md-7 position-relative" style="flex: 1;">
                         <div class="model-slider" style="display: flex; overflow: hidden;">
-                            <div class="model-slide" data-aos="fade-up" data-aos-duration="700">
-                                <img src="assets/model1.webp" alt="Model A">
+                            <div class="model-slide">
+                                <img src="assets/model1.webp" alt="Model A" class="model-img">
                                 <div class="overlay-modal">Model A</div>
                             </div>
-                            <div class="model-slide" data-aos="fade-up" data-aos-duration="1000">
-                                <img src="assets/model2.webp" alt="Model B">
-                                <div class="overlay-modal">Model B</div>
-                            </div>
-                            <div class="model-slide" data-aos="fade-up" data-aos-duration="1300">
-                                <img src="assets/model3.webp" alt="Model C">
-                                <div class="overlay-modal">Model C</div>
+                            <div class="model-slide">
+                                <img src="assets/model2.webp" alt="Model B" class="model-img" >
+                            <div class="overlay-modal">Model B</div>
                             </div>
                             <div class="model-slide">
-                                <img src="assets/model2.webp" alt="Model D">
-                                <div class="overlay-modal">Model D</div>
+                                <img src="assets/model3.webp" alt="Model C" class="model-img">
+                               <div class="overlay-modal">Model C</div>
                             </div>
                             <div class="model-slide">
-                                <img src="assets/model1.webp" alt="Model E">
-                                <div class="overlay-modal">Model E</div>
+                                <img src="assets/model2.webp" alt="Model D" class="model-img" >
+                            <div class="overlay-modal">Model D</div>
+                            </div>
+                            <div class="model-slide">
+                                <img src="assets/model1.webp" alt="Model E" class="model-img">
+                              <div class="overlay-modal">Model E</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-1">
-                        <img src="assets/arrow-right.svg" alt="Next" id="custom-arrow-right" class="custom-arrow-modal arrow-desktop-only" data-aos="fade-up" data-aos-duration="1400">
+                        <img src="assets/arrow-right.svg" alt="Next" id="custom-arrow-right" class="custom-arrow-modal arrow-desktop-only">
                     </div>
                 </div>
             </div>
-
-
-
+            
+            <div class="popup-modal-project" id="popup-modal-project">
+                <div class="popup-content-modal">
+                    <span class="close-btn-modal" id="close-btn-modal">&times;</span>
+                    <img id="popup-image-modal" src="" alt="Model Image">
+                </div>
+            </div>
+   
+            
+        
+            
+            
+            
             <div class="container-fluid master-img">
                 <div class="master-header text-center">
                     <h2 class="modal-title">Master Plan</h2>
@@ -513,7 +530,7 @@
 
 
             
-            <div class="image-register">
+            <div class="image-register" id="contact-form">
                 <div class="container image-overlay-container">
                     <div class="row  align-items-center register-section">
                         <!-- Left Side - Form -->
@@ -593,9 +610,7 @@
                 </div>
               </footer>
               
-             
-              
-            
+          
             
                 
 
@@ -654,6 +669,21 @@
 
 
 <script>
+
+    // register interest
+        document.getElementById('register-interest').addEventListener('click', function() {
+        const happyIcon = document.getElementById('happy-icon');
+        happyIcon.classList.add('show-happy-icon');
+        
+        const interestText = document.getElementById('interest-text');
+        interestText.style.opacity = 1;
+
+        document.getElementById('contact-form').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'  
+        });
+        });
+
                 const popupMaster = document.getElementById('popupMaster');
                 const closeBtn = document.getElementById('closeBtn');
                 const mainImage = document.querySelector('.modal-main-image');
@@ -687,7 +717,6 @@
                 });
             });
 
-
             //Gallery Slider
             $(document).ready(function() {
                 // Initialize gallery slider
@@ -695,8 +724,7 @@
                     infinite: true,
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    autoplay:true,
-                    autoplay: false,
+                    autoplay: false,  // Fixing autoplay: true to false as per your config
                     autoplaySpeed: 2000,
                     arrows: false, 
                     responsive: [
@@ -713,19 +741,19 @@
                     $('.gallery-slider').slick('slickNext'); 
                 });
 
-
-
                 $('.gallery-slider img').click(function() {
-                    const images = $(this).data('popup-images');
                     const popupSlider = $('.popup-slider');
+                    const index = $('.gallery-slider img').index($(this)); 
 
                     if (popupSlider.hasClass('slick-initialized')) {
                         popupSlider.slick('unslick');
                     }
 
-                    popupSlider.empty();
-                    images.forEach(image => {
-                        popupSlider.append(`<div><img src="${image}" alt="Popup Image" /></div>`);
+                    popupSlider.empty(); 
+
+                    $('.gallery-slider img').each(function() {
+                        const imageSrc = $(this).attr('src');
+                        popupSlider.append(`<div><img src="${imageSrc}" alt="Popup Image" /></div>`);
                     });
 
                     popupSlider.slick({
@@ -733,59 +761,60 @@
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         arrows: false,
+                        speed: 500,
+                        fade: false,
+                        cssEase: 'linear'
                     });
 
-                    updateCustomLines(0);
+                    popupSlider.slick('slickGoTo', index);
+
+                    createLines($('.popup-slider img').length);
+                    updateCustomLines(index);  
+
                     $('#popup').fadeIn();
-                });
 
-                
-                $(document).on('click', '.close-btn-popup', function() {
-                    $('#popup').fadeOut();
-                });
+                    $(document).on('click', '.close-btn-popup', function() {
+                        $('#popup').fadeOut();
+                    });
 
-                
-                $('.custom-prev').click(function() {
-                    $('.popup-slider').slick('slickPrev');
-                    const currentSlide = $('.popup-slider').slick('slickCurrentSlide');
-                    updateCustomLines(currentSlide);
-                });
+                    $('.custom-prev').click(function() {
+                        $('.popup-slider').slick('slickPrev');
+                        const currentSlide = $('.popup-slider').slick('slickCurrentSlide');
+                        updateCustomLines(currentSlide);
+                    });
 
-                $('.custom-next').click(function() {
-                    $('.popup-slider').slick('slickNext');
-                    const currentSlide = $('.popup-slider').slick('slickCurrentSlide');
-                    updateCustomLines(currentSlide);
-                });
+                    $('.custom-next').click(function() {
+                        $('.popup-slider').slick('slickNext');
+                        const currentSlide = $('.popup-slider').slick('slickCurrentSlide');
+                        updateCustomLines(currentSlide);
+                    });
 
-                function updateCustomLines(activeIndex) {
-                    const lineContainer = $('.custom-lines');
-                    lineContainer.empty();
-                    for (let i = 0; i < $('.popup-slider').slick('getSlick').slideCount; i++) {
-                        const line = $('<div></div>');
-                        if (i === activeIndex) {
-                            line.addClass('active-line');
+                    function createLines(imageCount) {
+                        const lineContainer = $('.custom-lines');
+                        lineContainer.empty();  
+
+                        for (let i = 0; i < imageCount; i++) {
+                            const line = $('<div></div>');
+                            lineContainer.append(line);  
                         }
-                        lineContainer.append(line);
                     }
-                }
-            });
 
-            document.querySelectorAll('.gallery-image-wrapper').forEach(wrapper => {
-                const img = wrapper.querySelector('img');
-                wrapper.style.overflow = 'hidden';
+                    function updateCustomLines(activeIndex) {
+                        const lineContainer = $('.custom-lines');
+                        lineContainer.find('div').removeClass('active-line');  
 
-                img.style.transition = "transform 0.5s ease";
-                img.style.transformOrigin = "center";
+                        lineContainer.find('div').eq(activeIndex).addClass('active-line');
 
-                wrapper.addEventListener('mouseover', () => {
-                    img.style.transform = "scale(1.2)";
+                        const lineWidth = 100 / lineContainer.find('div').length;
+                        const linePosition = (activeIndex * lineWidth);
+
+                        lineContainer.find('div').css({
+                            'width': `${lineWidth}%`,
+                            'left': `${linePosition}%`,
+                        });
+                    }
                 });
-
-                wrapper.addEventListener('mouseout', () => {
-                    img.style.transform = "scale(1)";
                 });
-            });
-
 
 
             //Modal Slider
@@ -815,10 +844,6 @@
                     $('.model-slider').slick('slickNext');
                 });
             });
-
-
-
-        
 
 
             // Counter function to animate numbers
@@ -868,7 +893,27 @@
             });
             });
 
-
+           // Popup Modal 
+           const popup = document.getElementById("popup-modal-project");
+            const popupImage = document.getElementById("popup-image-modal");
+            const closeButton = document.getElementById("close-btn-modal");
+            
+            document.querySelectorAll(".model-slide img").forEach((img) => {
+                img.addEventListener("click", (event) => {
+                    popup.style.display = "flex";
+                    popupImage.src = event.target.src;
+                });
+            });
+            
+            closeButton.addEventListener("click", () => {
+                popup.style.display = "none";
+            });
+            
+            popup.addEventListener("click", (event) => {
+                if (event.target === popup) {
+                    popup.style.display = "none";
+                }
+            });
 
             // News Slider
             document.addEventListener("DOMContentLoaded", function () {

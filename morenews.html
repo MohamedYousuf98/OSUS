@@ -37,86 +37,89 @@
 
  
 
-        <nav class="navbar bg-white pt-3 pb-3">
-                <div class="container d-flex justify-content-between align-items-center">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/logo.webp" alt="Logo">
-                    </a>
-            
-                    <!-- Globe icon and menu button aligned next to each other on one line -->
-                    <ul class="navbar-nav d-flex flex-row align-items-center">
-                           <!-- Menu button -->
-                           <li class="nav-item">
-                                <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
-                                    <i class="fas fa-bars mr-2 "></i> 
-                                <span style="font-weight: 600; margin-left: 10px;">Menu</span>
-                            </button>
-                        </li>
-
-                        <!-- Globe icon -->
-                        <li class="nav-item">
-                          <a class="nav-link text-dark" href="#">
-                              <i class="fas fa-globe ml-2"></i>
-                          </a>
-                          <div class="dropdown-content">
-                              <a href="#" onclick="setLanguage('en')">English</a>
-                              <a href="#" onclick="setLanguage('ar')">العربية</a>
-                          </div>
-                      </li>
-                    </ul>
-                </div>
-            </nav>
-            
+     
+    <nav class="navbar bg-white pt-3 pb-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.webp" alt="Logo">
+            </a>
     
-            
-            <!-- Slide Menu (Appears on both Mobile and Desktop) -->
-            <div id="sideMenu" class="side-menu ">
-                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
-                <div class="container ">
-                    <div class="row navbar-content mt-5">
-                        <!-- Left Side (Menu) -->
-                        <div class="col-md-6 side-menu-left">
-                            <div class="side-menu-content ">
-                                <ul class="menu-list ">
-                                  <li><a href="/index.html">Home <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="/allproject.html">Projects <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="about.html">About Osus <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
-                                  <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
-                                </ul>
+            <!-- Globe icon and menu button aligned next to each other on one line -->
+            <ul class="navbar-nav d-flex flex-row align-items-center">
+                   <!-- Menu button -->
+                   <li class="nav-item">
+                        <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
+                            <i class="fas fa-bars mr-2 "></i> 
+                        <span style="font-weight: 600; margin-left: 10px;">Menu</span>
+                    </button>
+              <!-- Globe icon with styled selected language label -->
+              <li class="nav-item">
+                <a class="nav-link text-dark d-flex align-items-center" href="#">
+                  <i class="fas fa-globe ml-2"></i>
+                  <span id="selected-language" class="language-label">English</span>
+                </a>
+                <div class="dropdown-content">
+                  <a href="#" onclick="setLanguage('en')">English</a>
+                  <a href="#" onclick="setLanguage('ar')">العربية</a>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    
+    <!-- Slide Menu (Appears on both Mobile and Desktop) -->
+    <div id="sideMenu" class="side-menu ">
+        <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
+        <div class="container ">
+            <div class="row navbar-content mt-5">
+                <!-- Left Side (Menu) -->
+                <div class="col-md-6 side-menu-left">
+                    <div class="side-menu-content ">
+                        <ul class="menu-list ">
+                                <li><a href="/index.html">Home <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="/allproject.html">Projects <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="about.html">About Osus <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="Teams.html">Teams <img src="assets/Component 33.webp" alt=""></a></li>
+                                <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+              
+                <!-- Right Side (Logo and Info) -->
+                <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
+                    <div class="logo-navbar-section">
+                        <img src="assets/Group 1261156266.webp" alt="Osus Logo" class="osus-logo">
+                        <div class="contact-info">
+                          <p>
+                            <a href="/allproject.html" class="nav-link-menu">Projects</a> &nbsp;&nbsp;
+                            <a href="/contact.html" class="nav-link-menu">Contact Us</a> &nbsp;&nbsp;
+                            <a href="/PrivacyPolicy.html" class="nav-link-menu">Privacy & Terms</a>
+                          </p>
+                           <h4><a href="mailto:Contact@Osusdev.com">Contact@Osusdev.com</a></h4>
+                                <h3>Working hours</h3>
+                                <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
+                                <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
                             </div>
-                        </div>
-                      
-                        <!-- Right Side (Logo and Info) -->
-                        <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
-                            <div class="logo-navbar-section">
-                                <img src="assets/Group 1261156266.webp" alt="Osus Logo" class="osus-logo">
-                                <div class="contact-info">
-                                        <p>Projects &nbsp;&nbsp; Facility management &nbsp;&nbsp; Contact Us</p>
-                                        <p>Privacy & Terms</p>
-                                        <h4>Contact@Osusdev.com</h4>
-                                        <h3>Working hours</h3>
-                                        <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
-                                        <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
-                                    </div>
-                                    
-                                <div class="social-icons mt-4">
-                                    <i class="fab fa-facebook"></i>
-                                    <i class="fab fa-twitter"></i>
-                                    <i class="fab fa-youtube"></i>
-                                    <i class="fab fa-linkedin"></i>
-                                    <i class="fab fa-tiktok"></i>
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </div>
+                        <div class="social-icons mt-4">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-tiktok"></i>
+                            <i class="fab fa-instagram"></i>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
             
-
-
 
 
 

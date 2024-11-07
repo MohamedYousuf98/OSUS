@@ -117,6 +117,7 @@ document.getElementById('popupOverlay').addEventListener('click', (e) => {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    pointer-events: none;
 }
 
 .custom-popup-content {
@@ -134,6 +135,10 @@ document.getElementById('popupOverlay').addEventListener('click', (e) => {
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
+    pointer-events: none;
+
+
+    
 }
 
 .custom-popup-content h3 {
@@ -151,6 +156,9 @@ document.getElementById('popupOverlay').addEventListener('click', (e) => {
 }
 
 </style>
+
+
+
 <!-- Bootstrap JS and dependencies (optional) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

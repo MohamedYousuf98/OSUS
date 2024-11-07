@@ -32,6 +32,8 @@
 </head>
 
 <body>
+            
+            
 
         <nav class="navbar bg-white pt-3 pb-3">
                 <div class="container d-flex justify-content-between align-items-center">
@@ -47,17 +49,16 @@
                                     <i class="fas fa-bars mr-2 "></i> 
                                 <span style="font-weight: 600; margin-left: 10px;">Menu</span>
                             </button>
-                        </li>
-
-                        <!-- Globe icon -->
-                        <li class="nav-item">
-                          <a class="nav-link text-dark" href="#">
-                              <i class="fas fa-globe ml-2"></i>
-                          </a>
-                          <div class="dropdown-content">
-                              <a href="#" onclick="setLanguage('en')">English</a>
-                              <a href="#" onclick="setLanguage('ar')">العربية</a>
-                          </div>
+                      <!-- Globe icon with styled selected language label -->
+                      <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" href="#">
+                          <i class="fas fa-globe ml-2"></i>
+                          <span id="selected-language" class="language-label">English</span>
+                        </a>
+                        <div class="dropdown-content">
+                          <a href="#" onclick="setLanguage('en')">English</a>
+                          <a href="#" onclick="setLanguage('ar')">العربية</a>
+                        </div>
                       </li>
                     </ul>
                 </div>
@@ -79,6 +80,7 @@
                                         <li><a href="about.html">About Osus <img src="assets/Component 33.webp" alt=""></a></li>
                                         <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
                                         <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="Teams.html">Teams <img src="assets/Component 33.webp" alt=""></a></li>
                                         <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
                                 </ul>
                             </div>
@@ -89,14 +91,16 @@
                             <div class="logo-navbar-section">
                                 <img src="assets/Group 1261156266.webp" alt="Osus Logo" class="osus-logo">
                                 <div class="contact-info">
-                                        <p>Projects &nbsp;&nbsp; Facility management &nbsp;&nbsp; Contact Us</p>
-                                        <p>Privacy & Terms</p>
-                                        <h4>Contact@Osusdev.com</h4>
+                                  <p>
+                                    <a href="/allproject.html" class="nav-link-menu">Projects</a> &nbsp;&nbsp;
+                                    <a href="/contact.html" class="nav-link-menu">Contact Us</a> &nbsp;&nbsp;
+                                    <a href="/PrivacyPolicy.html" class="nav-link-menu">Privacy & Terms</a>
+                                  </p>
+                                  <h4><a href="mailto:Contact@Osusdev.com">Contact@Osusdev.com</a></h4>
                                         <h3>Working hours</h3>
                                         <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
                                         <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
                                     </div>
-                                    
                                 <div class="social-icons mt-4">
                                     <i class="fab fa-facebook"></i>
                                     <i class="fab fa-twitter"></i>
@@ -110,10 +114,48 @@
                     </div>
                 </div>
             </div>
+
+         
+            
+
+        <!-- Announcement Modal -->
+        <div id="announcement" class="announcement">
+          <div class="announcement-content">
+            <img src="assets/masterplan.webp" alt="Announcement" />
+            <button id="close-announcement" class="close-btn-announcemnet">X</button>
+          </div>
+        </div>
+
+
+
+            <section class="home-header-slider px-0">
+              <div class="background-video"></div>
+              <div class="slider-vedio-img mt-5">
+                <!-- Video Slide -->
+                <div class="vedio-img-slider">
+                  <video controls autoplay muted loop class="w-100">
+                    <source src="assets/-dfca-47a0-bb03-b262236b52db.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+            
+                <!-- Image Slide -->
+                <div class="vedio-img-slider">
+                  <img src="assets/innerproj.webp" alt="Image 1" class="w-100">
+                  <div class="content-header-slider">
+                    <h1>A Legacy of Transformation. Beyond Buildings</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus porro aliquam maiores laborum, veritatis at enim eligendi officiis sapiente atque. Reprehenderit voluptatem molestias debitis, omnis sapiente nulla libero porro iusto!</p>
+                    <a href="#" class="btn-explore mt-2 ">
+                      More About Us    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            
             
 
 
-      <!-- Video Section -->
+<!-- 
       <div class="container">
         <section class="video-title  ">
           <h1>A Legacy of Transformation.<br>Beyond Buildings</h1>
@@ -130,7 +172,7 @@
           </div>
         </section>
       
-
+ -->
 
 <!-- Numbers Section-->
 <section class="counter-section">
@@ -239,7 +281,7 @@
     </div>
   
     <div class="mt-5">
-      <a href="#" class="see-more-button w-20 d-flex align-items-center justify-content-center" style="width: 240px;">
+      <a href="/allproject.html" class="see-more-button w-20 d-flex align-items-center justify-content-center" style="width: 240px;">
         Explore all projects 
         <img src="assets/arrow-down.svg" alt="" class="ms-2"> 
       </a>
@@ -580,6 +622,64 @@
 
 
 <script>
+
+  // Anouncement
+  window.onload = function () {
+
+  if (!sessionStorage.getItem("hasVisitedHomePage")) {
+    document.getElementById("announcement").style.display = "flex";
+    document
+      .getElementById("close-announcement")
+      .addEventListener("click", function () {
+        document.getElementById("announcement").style.display = "none";
+      });
+    sessionStorage.setItem("hasVisitedHomePage", "true");
+  }
+};
+
+
+
+
+$(document).ready(function(){
+  $('.slider-vedio-img').slick({
+      autoplay: false,
+      autoplaySpeed: 5000,
+      dots: false,
+      arrows: false,
+      infinite: true,
+      responsive: [
+          {
+              breakpoint: 1024,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+              }
+          },
+          {
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: false 
+              }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  arrows: false 
+              }
+          }
+      ]
+  });
+
+ 
+  AOS.refresh();
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const newsImages = document.querySelectorAll(".image-wrapper img, .project-card img.project-img");
 
@@ -589,14 +689,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const scaleY = 1.2; 
     img.style.transform = `scale(${scaleX}, ${scaleY})`;
 });
-
-
         img.addEventListener("mouseleave", () => {
             img.style.transform = "scale(1)";
         });
     });
 });
-
 
 
 AOS.init({
