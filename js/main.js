@@ -142,7 +142,7 @@ $(document).ready(function () {
   });
 });
 
-// Video Animation
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const videoContainer = document.querySelector(".video-container");
@@ -333,4 +333,3 @@ function setLanguage(language) {
     languageLabel.textContent = "العربية";
   }
 }
-

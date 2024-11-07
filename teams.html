@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSUS</title>
+    <meta name="description" content="Welcome to our website. We offer a variety of useful and interesting content across different topics. Enjoy a rich and informative browsing experience.">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Slick Slider JS -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <!-- Custom Script -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-Sy4T3FZT63M5ac+4e4vG1mf8aKOVbIQ6E+0BJoO+IR+JP4PzS6zMprZX51jItNHRq5c7QW8B9yWHD8MwVGmVYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+            
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="scrollCue.css">
+
+</head>
+<body>
+            
+            
+
+        <nav class="navbar bg-white pt-3 pb-3">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/logo.webp" alt="Logo">
+                    </a>
+            
+                    <!-- Globe icon and menu button aligned next to each other on one line -->
+                    <ul class="navbar-nav d-flex flex-row align-items-center">
+                           <!-- Menu button -->
+                           <li class="nav-item">
+                                <button class="navbar-toggler text-dark d-flex align-items-center " type="button" onclick="openMenu()">
+                                    <i class="fas fa-bars mr-2 "></i> 
+                                <span style="font-weight: 600; margin-left: 10px;">Menu</span>
+                            </button>
+                      <!-- Globe icon with styled selected language label -->
+                      <li class="nav-item">
+                        <a class="nav-link text-dark d-flex align-items-center" href="#">
+                          <i class="fas fa-globe ml-2"></i>
+                          <span id="selected-language" class="language-label">English</span>
+                        </a>
+                        <div class="dropdown-content">
+                          <a href="#" onclick="setLanguage('en')">English</a>
+                          <a href="#" onclick="setLanguage('ar')">العربية</a>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+            
+    
+            
+            <!-- Slide Menu (Appears on both Mobile and Desktop) -->
+            <div id="sideMenu" class="side-menu ">
+                <div class="close-btn-menu" onclick="closeMenu()">&times;</div>
+                <div class="container ">
+                    <div class="row navbar-content mt-5">
+                        <!-- Left Side (Menu) -->
+                        <div class="col-md-6 side-menu-left">
+                            <div class="side-menu-content ">
+                                <ul class="menu-list ">
+                                        <li><a href="/index.html">Home <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="/allproject.html">Projects <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="about.html">About Osus <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="awards.html">Awards <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="allnews.html">News <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="Teams.html">Teams <img src="assets/Component 33.webp" alt=""></a></li>
+                                        <li><a href="contact.html">Contact Us <img src="assets/Component 33.webp" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                      
+                        <!-- Right Side (Logo and Info) -->
+                        <div class="col-md-6 side-menu-right "style="border-left: 1px solid #DBDCDF">
+                            <div class="logo-navbar-section">
+                                <img src="assets/Group 1261156266.webp" alt="Osus Logo" class="osus-logo">
+                                <div class="contact-info">
+                                  <p>
+                                    <a href="/allproject.html" class="nav-link-menu">Projects</a> &nbsp;&nbsp;
+                                    <a href="/contact.html" class="nav-link-menu">Contact Us</a> &nbsp;&nbsp;
+                                    <a href="/PrivacyPolicy.html" class="nav-link-menu">Privacy & Terms</a>
+                                  </p>
+                                  <h4><a href="mailto:Contact@Osusdev.com">Contact@Osusdev.com</a></h4>
+                                        <h3>Working hours</h3>
+                                        <p>Call Centre: Sat to Thu 9 AM to 10 PM</p>
+                                        <p>Sales Centre: All weekdays from 3 PM to 11 PM</p>
+                                    </div>
+                                <div class="social-icons mt-4">
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-linkedin"></i>
+                                    <i class="fab fa-tiktok"></i>
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+          
+          <div class="container">
+            <div class="ethos-section">
+              <div class="ethos-content">
+                <h2>Strategic Leadership Ethos</h2>
+                <p> At OSUS, our leadership team ignites the pioneeri
+                  At OSUS, our timeless approach is fuelled by our deep-rooted commitment to reshaping the Saudi Arabian real estate fabric. Our aspirations resonate with the Saudi Vision 2030,
+                   a commitment to crafting a lasting heritage that echoes through the annals of time in this flourishing Kingdom we proudly call home.
+                </p>
+                <p>We understand the poetic language of landscapes, the intricate dialogue of architecture with time, and the symphony of design that creates visually stunning spaces imbued with a sense of place and community. We began our journey in Riyadh and built a reputable portfolio of a meticulously crafted array of high-quality residential, commercial, hospitality, retail, destinations, 
+                  and public projects. Our developments are a testament to craftsmanship, which effortlessly defines our work.</p>
+                  
+              </div>
+            </div>
+          </div>
+         
+
+
+
+          <div class="profile-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-md-5 profile-img-container">
+                  <img src="assets/abdullah.webp" alt="Profile Image" class="profile-img">
+                </div>
+                <div class="col-12 col-md-7 profile-content">
+                  <h2>Abdulah Almajed</h2>
+                  <h4>Chairman and Founder</h4>
+                  <p>At OSUS, our timeless approach is fuelled by our deep-rooted commitment to reshaping the Saudi Arabian real estate fabric. Our aspirations resonate with the Saudi Vision 2030, a commitment to crafting a lasting heritage that echoes through the annals of time in this flourishing Kingdom we proudly call home.</p>
+                  <p>We understand the poetic language of landscapes, the intricate dialogue of architecture with time, and the symphony of design that creates visually stunning spaces imbued with a sense of place and community. We began our journey in Riyadh and built a reputable portfolio of a meticulously crafted array of high-quality residential, commercial, hospitality, retail, destinations, and public projects. Our developments are a testament to craftsmanship, which effortlessly defines our work.</p>
+                  <p>Our core values underscore our everlasting courage, credibility, transparency, and mastery pillars. These values echo through every facet of our operations as we launch prolific real estate products and carve an unprecedented industry landscape. With the aspiration to ascend as a guiding light within the Kingdom, we invite you to join us on this invigorating journey of boundless creativity, unwavering excellence, and transformative impact.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+       
+       
+       <section class=" executive-section">
+        <div class="container ">
+        <div class="executive-header mb-4 ">
+          <h2>Executive Management</h2>
+          <p>Meet our exceptionally experienced team of market leaders that have helped shape our success and what it is today.</p>
+          
+          <div class="row teams-slider">
+            <!-- Executive Member Card -->
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e1.webp" alt="Moh'd Almujaidel">
+                <h4>PhD. Moh'd Almujaidel</h4>
+                <span>CEO</span>
+              </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e2.webp" alt="Abdulmajeed Al Majid">
+                <h4>Abdulmajeed Al Majid</h4>
+                <span>Commercial GM</span>
+              </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e3.webp" alt="Anas Majid Al Majid">
+                <h4>Anas Majid Al Majid</h4>
+                <span>Deputy CEO</span>
+              </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e4.webp" alt="Khalid Majid Al Majid">
+                <h4>Khalid Majid Al Majid</h4>
+                <span>GM, Investment & Development</span>
+              </div>
+            </div>
+        
+            <!-- More Executive Member Cards -->
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e5.webp" alt="Ahmad Badawy">
+                <h4>Ahmad Badawy</h4>
+                <span>CFO</span>
+              </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e6.webp" alt="Hossam Reda">
+                <h4>Hossam Reda</h4>
+                <span>VP, Marketing & Sales</span>
+              </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e7.webp" alt="Fadi Sarwar">
+                <h4>Fadi Sarwar</h4>
+                <span>GM, PMO</span>
+              </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e8.webp" alt="Hamdy ElBeshbawy">
+                <h4>Hamdy ElBeshbawy</h4>
+                <span>Projects Development Director</span>
+              </div>
+            </div>
+        
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="executive-card">
+                <img src="assets/e9.webp" alt="Ali Mesfer Al Ghamdi">
+                <h4>Ali Mesfer Al Ghamdi</h4>
+                <span>Transformation Consultant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        
+
+
+
+
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-md-6">
+      
+        
+          <a href="/index.html" target="_blank">
+            <img src="assets/footer-logo.webp" alt="OSUS Logo" class="footer-logo">
+        </a>
+       
+          <p class="company-description">
+            Osus Real Estate is a Saudi Real Estate Development Company based in Riyadh. Founded in 2006, we endeavour to craft profitable and iconic projects ranging from residential, commercial, hospitality, and raw lands.
+          </p>
+          
+          <div class="working-hours">
+            <p><strong>Working hours</strong></p>
+       
+            <p><span>Call Centre</span><span>Sat to Thu 9 AM to 10 PM</span></p>
+            <p><span>Sales Centre</span><span>All week days from 3 PM to 11 PM</span></p>
+          </div>
+  
+          <!-- Social Media Links -->
+          <div class="social-icons-footer mt-4">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-md-3 quick-links">
+          <h6>Quick links</h6>
+          <ul class="list-unstyled">
+            <li><a href="/allproject.html" >Projects</a></li>
+            <li><a href="about.html" >About Osus</a></li>
+            <li><a href="contact.html" >Contact us</a></li>
+            <li><a href="/allnews.html">News</a></li>
+          </ul>
+        </div>
+        
+  
+        <!-- Badge -->
+        <div class="col-md-3 text-md-end gptw-badge">
+          <img src="assets/footer-img.webp" alt="Great Place To Work Certified Badge">
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="footer-bottom mt-4 mb-0">
+        <p>All rights reserved. © OSUS Real Estate 2024</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script>
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-G3YH6HHwST4lDqlk2JS1UGQYqba50r/5Jd+xrm1jLBVPhPyPnItjR4EaaH1wogRRBNMz69dJe5N08aN5NOYciA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  
+  <!-- Slick Slider -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+  <!-- mmenu -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.13/mmenu.min.js"></script>
+  
+  <!-- Nice Select & Wow & Parallax -->
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
+  <script src="./assets/js/wow.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  
+  <!-- GSAP (for loading page) -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  
+  <!-- FancyBox (for image or video popup) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  
+  <!-- Bootstrap Bundle with Popper (JavaScript) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-Xk/5uHBm6F59Ecf7DzN93ewP2eRTtM0NFdQUz3xv2d+1V/kd+ufPQyM4o5XzY0/ymuwVp6LMTPhvquKeXilrMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Waypoints & CounterUp (for animation) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+  
+  <!-- Swiper Slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <div class="cursor cursor-large"></div>
+  <div class="cursor cursor-small"></div>
+  
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+  <script src="script.js" defer></script> 
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+    
+  
+<script>
+  $(document).ready(function() {
+    function initSlick() {
+      if ($(window).width() < 768) {
+        if (!$('.teams-slider').hasClass('slick-initialized')) {
+          $('.teams-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            infinite: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000
+          });
+        }
+      } else {
+        if ($('.teams-slider').hasClass('slick-initialized')) {
+          $('.teams-slider').slick('unslick');
+        }
+      }
+    }
+
+    // Initialize slick slider on page load
+    initSlick();
+
+    // Re-initialize slick slider on window resize
+    $(window).on('resize', function() {
+      initSlick();
+    });
+  });
+</script>
+
+  </body>
+  </html>

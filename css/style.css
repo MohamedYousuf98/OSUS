@@ -4599,3 +4599,187 @@ margin-bottom: 40px;
   padding-top: 33%;
 }
 }
+/*-----------------------------Teams ----------------------*/
+.ethos-section {
+  position: relative;
+  background-image: url('../assets/teams header.webp'); 
+  background-size: cover; 
+  background-position: left center;
+  border-radius: 15px;
+  height: 620px;
+  margin-top: 120px;
+}
+
+.ethos-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;  
+  transform: translateY(-50%); 
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 900px;
+  text-align: left;
+}
+
+.ethos-content h2 {
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.ethos-content p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333435;
+}
+
+@media (max-width: 768px) {
+  .ethos-section {
+    height: 650px; 
+  }
+
+  .ethos-content {
+    left: 5%; 
+    max-width: 90%;
+    padding: 20px; 
+  }
+
+  .ethos-content h2 {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .ethos-content p {
+    font-size: 14px; 
+    color: #333435;
+  }
+}
+/*----------------- Founder-------*/
+.profile-section {
+  background-color: #C4B29C;
+  margin-top: 10%;
+  margin-bottom: 7%;
+  position: relative;
+}
+
+.profile-img {
+  width: 100%;
+  height: 630px;
+  object-fit: cover;
+  border-radius: 16px;
+  position: absolute;
+  top: -30px;
+  bottom: -30px; 
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.profile-content {
+  position: relative;
+  z-index: 1;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 16px;
+}
+
+.profile-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.profile-content h4 {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 300;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.profile-content p {
+  font-size: 17px;
+  font-weight: 400;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    padding: 0 10px;
+    margin-top: 95px;
+  }
+
+  .profile-img-container {
+    margin-bottom: 15px;
+  }
+
+  .profile-img {
+    position: relative;
+    height: 370px; 
+    top: 30; 
+  }
+
+  .profile-content {
+    display: block;
+    padding: 15px;
+ 
+    border-radius: 16px;
+  }
+}
+
+.executive-section {
+  background-color: #E6E9E9;
+  padding: 50px 0;
+}
+.executive-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.executive-header p {
+  font-size: 16px;
+  color: #333435;
+  max-width: 40%;
+  margin-bottom: 70px;
+}
+.executive-card {
+  padding: 15px;
+  text-align: center;
+}
+.executive-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px; /* Space only below the image */
+}
+.executive-card h4, .executive-card span {
+  display: block;
+  margin: 5px 0; /* To ensure they are close to each other */
+  color: #000000;
+}
+.executive-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.executive-card span {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .executive-header p {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  
+
+.executive-section {
+  background-color: #E6E9E9;
+  padding: 40px 0;
+}
+}
