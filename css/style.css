@@ -494,7 +494,7 @@ background-color: #C5AA84;
 .content-header-slider {
   position: absolute;
   top: 50%;
-  left: 35%;
+  left: 37%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6); 
   color: #fff;
@@ -1093,6 +1093,8 @@ background-color: #C5AA84;
   font-size: 50px;
   text-align: left;
   z-index: 2;
+  left:5%;
+  
 }
 .crafting-text h2{
   
@@ -1416,7 +1418,12 @@ background-color: #C5AA84;
   font-weight: 400;
   margin-bottom: 15px;
 }
-
+.card-news-body h6 {
+  color: #333435;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
 .card-news-body h5 {
   font-size: 18px;
   font-weight: 600;
@@ -2382,7 +2389,7 @@ font-weight: 400;
 }
 .award-content{
     background: linear-gradient(180deg, #A87F47 0%, #C5AA84 100%);
-    padding: 25px;
+    padding: 20px;
     height:230px;
 }
 .award-year {
@@ -4381,7 +4388,11 @@ margin-bottom: 40px;
   color: #fff;
   font-weight: 500;
   z-index: 2; 
+  align-items: center;
+  text-align: center;
+  display: flex;
 }
+
 
 .coming-soon {
   background-color: #ADB3B9;

@@ -237,6 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
   counters.forEach((counter) => observer.observe(counter));
 });
 
+/*
 // Projects Effect
 window.addEventListener("scroll", () => {
   document.querySelectorAll(".project-card img.project-img").forEach((img) => {
@@ -245,7 +246,7 @@ window.addEventListener("scroll", () => {
     img.style.transform = `translateY(${offset}px)`;
   });
 });
-
+*/
 //  Portofolio Section
 $(document).ready(function () {
   function initializeSlider() {
