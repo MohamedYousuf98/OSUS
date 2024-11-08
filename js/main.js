@@ -250,6 +250,7 @@ window.addEventListener("scroll", () => {
 //  Portofolio Section
 $(document).ready(function () {
   function initializeSlider() {
+    const isRtl = $("html").attr("dir") === "rtl"; 
     if ($(window).width() < 768) {
       if (!$(".portfolio-slider").hasClass("slick-initialized")) {
         $(".portfolio-slider").slick({
@@ -258,6 +259,7 @@ $(document).ready(function () {
           autoplay: true,
           autoplaySpeed: 1000,
           dots: false,
+          rtl: isRtl, 
         });
       }
     } else {
@@ -266,11 +268,13 @@ $(document).ready(function () {
       }
     }
   }
+  
   initializeSlider();
   $(window).resize(function () {
     initializeSlider();
   });
 });
+
 // One Selected News
 
 const playButton = document.getElementById("playButton");

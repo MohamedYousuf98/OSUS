@@ -352,7 +352,7 @@ html[dir="rtl"] .step-content {
 
 html[dir="rtl"] .step-content h5,
 html[dir="rtl"] .step-content p {
-  text-align: right;
+  text-align: center;
 }
 
 html[dir="rtl"] .step-content img {
@@ -469,6 +469,14 @@ html[dir="rtl"] .ethos-content {
   text-align: left;
 }
 
-html[dir="rtl"] .unlock-icon-wrapper {
+[dir="rtl"] .unlock-icon-wrapper {
+  justify-content: right;
+}
+
+.step-content {
+  text-align: left;
+}
+
+[dir="rtl"] .step-content {
   text-align: right;
 }
