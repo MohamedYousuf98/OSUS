@@ -335,7 +335,7 @@ html[dir="rtl"] .crafting-text {
   text-align: right;
   direction: rtl;
   z-index: 2;
-  right: 13%;
+  padding-right: 13%;
 }
 
 html[dir="rtl"] .crafting-text h2 {
