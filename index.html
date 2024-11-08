@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.ar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
         <!-- jQuery -->
@@ -146,13 +147,13 @@
                     <h1>A Legacy of Transformation. Beyond Buildings</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus porro aliquam maiores laborum, veritatis at enim eligendi officiis sapiente atque. Reprehenderit voluptatem molestias debitis, omnis sapiente nulla libero porro iusto!</p>
                     <a href="#" class="btn-explore mt-2 ">
-                      More About Us    </a>
+                      More About Us  </a>
                   </div>
                 </div>
               </div>
             </section>
             
-            
+       
 
 
 <!-- 
@@ -228,12 +229,13 @@
           reflecting the multifaceted nature of our brand.
         </p>
         <a href="#" class="btn-explore mt-4 me-2" data-aos="fade-up" data-aos-duration="800">
-          More About Us  <img src="assets/arrow-down.svg" alt="">
+          More About Us  <img src="assets/arrow-down.svg" alt="" class="arrow-img">
         </a>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -288,6 +290,7 @@
     </div>     
   </div>
 </div>
+
 
 
 <!--Crafting-->
@@ -418,6 +421,7 @@
     <img src="assets/arrow-down.svg" alt="" class="ms-2">
   </a>
 </section>
+
 
 
 
@@ -624,6 +628,7 @@
 
 <script>
 
+
   // Anouncement
   window.onload = function () {
 
@@ -639,42 +644,48 @@
 };
 
 
+$(document).ready(function() {
+  var direction = $("body").css("direction");
 
+  var settings = {
+    autoplay: false,
+    autoplaySpeed: 5000,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false 
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false 
+        }
+      }
+    ]
+  };
 
-$(document).ready(function(){
-  $('.slider-vedio-img').slick({
-      autoplay: false,
-      autoplaySpeed: 5000,
-      dots: false,
-      arrows: false,
-      infinite: true,
-      responsive: [
-          {
-              breakpoint: 1024,
-              settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-              }
-          },
-          {
-              breakpoint: 768,
-              settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  dots: false 
-              }
-          },
-          {
-              breakpoint: 480,
-              settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  arrows: false 
-              }
-          }
-      ]
-  });
+ 
+  if (direction === "rtl") {
+    settings.rtl = true; 
+  }
 
+  $('.slider-vedio-img').slick(settings);
  
   AOS.refresh();
 });

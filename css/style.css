@@ -136,6 +136,7 @@ main {
   justify-content: center;
  
 }
+
 /* Side Menu Container */
 .side-menu {
   height: 100%;
@@ -254,9 +255,9 @@ main {
   right: 20px;
   font-size: 36px;
   cursor: pointer;
-  color: #fff;
+  color: #000000;
 border-radius: 50%;
-  background-color: #C5AA84;
+background-color: #C5AA84;
   width: 40px;
   height: 40px;
   display: flex;
@@ -3109,6 +3110,10 @@ display: -webkit-box;
   border-left: none;
   
 }
+.values-content {
+ padding:25px;
+}
+
 }
 /*----------------------------------One Selected News Page --------------------------------*/
 .osn-header-section {
@@ -3401,7 +3406,7 @@ display: -webkit-box;
   margin-bottom: 18px;
 }
 .inne-n-news-content{
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 
@@ -4050,8 +4055,6 @@ display: -webkit-box;
   object-fit: cover;
   display: block;
   border-radius: 30px;
-
-
 }
 .overlay-modal {
   position: absolute;
@@ -4073,6 +4076,7 @@ display: -webkit-box;
   pointer-events: none;
 
 }
+
 .btn-outline-secondary {
   display: inline-flex;
   align-items: center;
@@ -4107,6 +4111,8 @@ display: -webkit-box;
   position: relative;
   cursor: pointer; 
   object-fit: contain;
+  width: 100vw;
+  
  
 }
 .popup-master {
@@ -4170,28 +4176,28 @@ display: -webkit-box;
 }
 
 
-.modal-header {
-display: flex;
-flex-direction: column; 
-align-items: center;
-margin-bottom: 1rem;
-}
+  .modal-header {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin-bottom: 1rem;
+  }
 
-.modal-title {
-font-weight: 700;
-font-size: 33px;
-color:#000000;
-margin-bottom: 15px;
-margin-top: 20px;
-}
+  .modal-title {
+  font-weight: 700;
+  font-size: 33px;
+  color:#000000;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  }
 
-.modal-subtitle {
-color: #333435;
-font-weight: 500;
-font-size: 17px;
-margin-bottom: 35px;
+  .modal-subtitle {
+  color: #333435;
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 35px;
 
-}
+  }
 
 
 .register-section {
@@ -4216,10 +4222,6 @@ margin-bottom: 35px;
   width: 100%;
   padding: 10px;
 }
-
-
-
-
 
 .image-overlay-register {
   position: absolute;
@@ -4756,11 +4758,11 @@ margin-bottom: 40px;
   height: 200px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 10px; /* Space only below the image */
+  margin: 0 auto 10px; 
 }
 .executive-card h4, .executive-card span {
   display: block;
-  margin: 5px 0; /* To ensure they are close to each other */
+  margin: 5px 0; 
   color: #000000;
 }
 .executive-card h4 {

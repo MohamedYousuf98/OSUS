@@ -124,9 +124,10 @@ video.addEventListener("click", function () {
     video.play();
   }
 });
-
 // News Slider
 $(document).ready(function () {
+  var isRTL = $("html").attr("dir") === "rtl";
+
   $(".news-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -135,14 +136,13 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+    rtl: isRTL, 
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
   });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const videoContainer = document.querySelector(".video-container");
@@ -333,3 +333,4 @@ function setLanguage(language) {
     languageLabel.textContent = "العربية";
   }
 }
+

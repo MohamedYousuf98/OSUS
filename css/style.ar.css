@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "Helvetica Neue Arabic";
+  src: url("/fonts/_alfont_com_هلفيتيكا-عربي-.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Helvetica Neue Arabic", sans-serif !important;
+}
+.close-btn,
+.icon-close,
+.close-btn-menu,
+.side-menu-close,
+.close-btn-popup,
+.close-btn-announcemnet,
+.close-btn-modal {
+  font-family: initial !important;
+}
+.nav-item span {
+  margin-right: 3px;
+}
+.side-menu-right {
+  border-right: 1px solid #dbdcdf;
+}
+
+html[lang="en"] .side-menu-right {
+  border-right: none;
+}
+
+html[dir="rtl"] .side-menu-right {
+  border-right: 1px solid #dbdcdf;
+  border-left: none !important;
+}
+.logo-navbar-section {
+  text-align: left;
+}
+
+body[dir="rtl"] .logo-navbar-section {
+  justify-content: flex-end;
+}
+
+.see-more-button img,
+.btn-explore img {
+  transform: rotate(0deg);
+  margin-right: 5px;
+}
+
+[dir="rtl"] .see-more-button img,
+[dir="rtl"] .btn-explore img {
+  transform: rotate(180deg);
+}
+
+body[dir="rtl"] .see-more-button img {
+  transform: rotate(180deg);
+}
+[dir="rtl"] .horizontal-line {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .vertical-line {
+  right: auto;
+  left: 0;
+}
+.fa-bars {
+  margin-left: 6px;
+}
+[dir="rtl"] .contact-title,
+[dir="rtl"] .contact-subtitle {
+  text-align: right;
+}
+[dir="rtl"] .contact-info-item .contact-label {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] .location-info h2 {
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+[dir="rtl"] .location-info p.location-address {
+  margin-top: 5px;
+  text-align: right;
+}
+[dir="rtl"] .arrow {
+  transform: rotate(180deg);
+  margin-right: 25px;
+}
+
+[dir="rtl"] .tabs {
+  display: flex;
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .select-area {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .dropdown-city {
+  display: none;
+}
+
+[dir="rtl"] .select-area:hover .dropdown-city {
+  display: block;
+}
+
+[dir="ltr"] .tabs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+[dir="ltr"] .select-area {
+  margin-right: 20px;
+}
+
+[dir="rtl"] .project-info {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .project-info a {
+  text-align: right;
+}
+
+[dir="rtl"] .project-info h3 {
+  text-align: right;
+}
+[dir="rtl"] .icon-img {
+  margin-left: 7px;
+}
+
+[dir="rtl"] .vision-title-header h1 {
+  margin-right: 7px;
+  text-align: right;
+}
+[dir="rtl"] a img {
+  margin-left: 10px;
+}
+[dir="rtl"] .osn-date img {
+  margin-left: 10px;
+}
+
+[dir="rtl"] .project-location-text {
+  text-align: right;
+}
+
+[dir="rtl"] .project-location-text h2 {
+  text-align: right;
+}
+
+[dir="rtl"] .project-location-text p {
+  text-align: right;
+}
+
+[dir="rtl"] .get-location {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 35%;
+}
+
+[dir="rtl"] .get-location img {
+  margin-left: 8px;
+}
+
+[dir="rtl"] .project-location-text {
+  text-align: right;
+  padding-right: 5%;
+  margin-right: 50px;
+  max-width: 50%;
+}
+
+[dir="rtl"] .get-location {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.get-location img {
+  transform: rotate(0deg);
+  margin-right: 5px;
+}
+[dir="rtl"] .get-location img {
+  transform: rotate(180deg);
+  margin-left: 6px;
+}
+
+[dir="rtl"] .download-btn img {
+  transform: rotate(180deg);
+  margin-right: 6px;
+}
+
+[dir="rtl"] .custom-arrows .custom-prev-gallery {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .custom-arrows .custom-next-gallery {
+  transform: rotate(180deg);
+}
+[dir="rtl"] .list-modals-btn {
+  text-align: right;
+}
+
+[dir="rtl"] .list-modals-btn img {
+  transform: rotate(180deg);
+}
+[dir="rtl"] #custom-arrow-right {
+  transform: rotate(180deg);
+}
+[dir="rtl"] .modal-section {
+  text-align: right;
+}
+
+[dir="rtl"] .modal-section h2,
+[dir="rtl"] .modal-section p {
+  text-align: right;
+}
+[dir="rtl"] .list-modals-btn img {
+  margin-right: 7px;
+}
