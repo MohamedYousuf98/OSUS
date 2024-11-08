@@ -139,12 +139,14 @@
         <div class="container mt-4">
             <div class="tabs-fixed" id="tabs-fixed">
                 <!-- Tabs for Project Filtering -->
-                <div class="tabs">
+                <div class="tabs ">
+                <div class=" tabs-slider">
                     <a href="#" class="tab active" data-tab="all">ALL</a>
                     <a href="#" class="tab" data-tab="residential">Residential Projects</a>
                     <a href="#" class="tab" data-tab="commercial">Commercial Projects</a>
                     <a href="#" class="tab" data-tab="lands">Lands</a>
                     <a href="#" class="tab" data-tab="od">OD Projects</a>
+                </div>
                     <div class="select-area">
                         Select Area
                         <img src="assets/Icon (1).svg" alt="Dropdown Icon" width="12" height="12">
@@ -158,11 +160,13 @@
                     </div>
                 </div>
             </div>
-      
-            
-       
+        </div>
+
+
         
 
+
+    <div class="container">
     <div class="osus-project">
         <h2 data-aos="fade-up" data-aos-duration="800">OSUS Projects</h2>
         <p data-aos="fade-up" data-aos-duration="800">As one of the most innovative, customer-focused and trusted Real Estate groups worldwide.</p>
@@ -214,6 +218,7 @@
             <!-- Repeat project details as necessary -->
         </div>
     </div>
+
 
   
     <!-- Project Card 2 -->
@@ -660,7 +665,44 @@
 
 
   <script>
-   
+
+        // Tabs Slider 
+    $(document).ready(function(){
+        function initSlick() {
+            if ($(window).width() <= 768) {
+                if (!$(".tabs-slider").hasClass("slick-initialized")) {
+                    $(".tabs-slider").slick({
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        autoplay: false,
+                        autoplaySpeed: 1200,
+                        infinite: false,
+                        arrows: false,
+                        dots: false,
+                        focusOnSelect: true,
+                    });
+
+                    var sweetScroll = new SweetScroll({
+                        selector: ".tabs-slider .tab",
+                        duration: 700,
+                    });
+                }
+            } else {
+                if ($(".tabs-slider").hasClass("slick-initialized")) {
+                    $(".tabs-slider").slick("unslick");
+                }
+            }
+        }
+        initSlick();
+        $(window).resize(function () {
+            initSlick();
+        });
+    });
+
+
+        
+
+        
     document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseover', function() {
         const img = card.querySelector('.project-img');
