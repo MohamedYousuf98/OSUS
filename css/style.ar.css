@@ -236,3 +236,40 @@ body[dir="rtl"] .see-more-button img {
 [dir="rtl"] .custom-next img {
   transform: rotate(180deg);
 }
+html[dir="rtl"] .unlock-body {
+  direction: rtl;
+}
+
+html[dir="rtl"] .unlock-body .text-center {
+  text-align: right;
+}
+
+html[dir="rtl"] .unlock-body .unlockcard {
+  text-align: right;
+}
+
+html[dir="rtl"] .unlock-body .unlock-icon-wrapper {
+  text-align: right;
+}
+
+html[dir="rtl"] .unlock-body .unlock-icon {
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .unlock-body .unlockcard-body-top {
+  text-align: right;
+}
+
+html[dir="rtl"] .unlock-body .card-unlock-title {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .unlock-body .card-unlock-text {
+  text-align: right;
+}
+
+html[dir="rtl"] .card-unlock-title.text-left {
+  text-align: right !important;
+}
+
+
