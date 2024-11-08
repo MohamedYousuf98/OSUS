@@ -221,3 +221,18 @@ body[dir="rtl"] .see-more-button img {
 [dir="rtl"] .list-modals-btn img {
   margin-right: 7px;
 }
+
+
+[dir="rtl"] .custom-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+[dir="rtl"] .custom-prev img {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .custom-next img {
+  transform: rotate(180deg);
+}

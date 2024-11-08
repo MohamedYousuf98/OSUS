@@ -3960,7 +3960,7 @@ display: -webkit-box;
   z-index: 10;
 }
 
-
+/*
 .custom-lines {
     display: flex;
     justify-content: center;
@@ -4019,7 +4019,7 @@ display: -webkit-box;
   -ms-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
 }
-
+*/
 /* Custom Controls */
 .custom-controls {
     display: flex;
