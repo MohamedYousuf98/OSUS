@@ -1913,7 +1913,9 @@ font-weight: 400;
       align-items: center;
       text-align: center;
       gap: 10px;
+      padding-bottom: 0px;
   }
+  
   }
       
     .tab {
@@ -2389,6 +2391,21 @@ font-weight: 400;
   
     width: 42%;
   }
+  
+    .list-modals-btn {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      width: auto; 
+      margin: 0 auto; 
+      margin-bottom: 20px;
+    }
+  
+    
+    .list-modals-btn img {
+      margin-left: 8px; 
+    }
+  
 
   .all-news-section p {
       font-size: 23px;
@@ -2939,7 +2956,6 @@ display: -webkit-box;
       margin-left: 0;
       width: 100%;
       margin-top: 20px;
-      margin-bottom: 50px;
   }
   .vision-content {
     margin-left: -1 !important;
@@ -2971,7 +2987,6 @@ display: -webkit-box;
     margin-left: -3px !important; 
     width: calc(100% + 20px); 
     padding: 15px; 
-    height: auto; 
     overflow-x: none !important;
   }
 }
@@ -4213,7 +4228,8 @@ display: -webkit-box;
     width: 40px;
     height: 40px;
   }
-}
+  }
+
 
 @media (max-width: 480px) {
   .close-btn {
@@ -4222,6 +4238,7 @@ display: -webkit-box;
     height: 12vw;
   }
 }
+
 
 
   .modal-header {
@@ -4405,6 +4422,13 @@ margin-bottom: 40px;
   }
   .portofolio-project-section{
     padding: 20px;
+  }
+  .text-start {
+    text-align: center !important;
+  }
+  .custom-center .list-modals-btn {
+    width: auto;
+    margin-top: 1rem; 
   }
  
 }

@@ -200,7 +200,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Numbers
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
 
@@ -209,14 +208,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let count = 0;
 
     const updateCount = () => {
-      const increment = Math.ceil(target / 200);
+      // Increase the increment value to speed up the counter
+      const increment = Math.ceil(target / 100); // Lower number = faster count
+
       count += increment;
 
       if (count >= target) {
         counter.innerText = `+${target}K`;
       } else {
         counter.innerText = `+${count}K`;
-        setTimeout(updateCount, 300);
+        // Reduce the timeout to speed up the updates
+        setTimeout(updateCount, 100); // Lower number = faster updates
       }
     };
 
@@ -237,6 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
   counters.forEach((counter) => observer.observe(counter));
 });
 
+
 /*
 // Projects Effect
 window.addEventListener("scroll", () => {
@@ -250,7 +253,7 @@ window.addEventListener("scroll", () => {
 //  Portofolio Section
 $(document).ready(function () {
   function initializeSlider() {
-    const isRtl = $("html").attr("dir") === "rtl"; 
+    const isRtl = $("html").attr("dir") === "rtl";
     if ($(window).width() < 768) {
       if (!$(".portfolio-slider").hasClass("slick-initialized")) {
         $(".portfolio-slider").slick({
@@ -259,7 +262,7 @@ $(document).ready(function () {
           autoplay: true,
           autoplaySpeed: 1000,
           dots: false,
-          rtl: isRtl, 
+          rtl: isRtl,
         });
       }
     } else {
@@ -268,7 +271,7 @@ $(document).ready(function () {
       }
     }
   }
-  
+
   initializeSlider();
   $(window).resize(function () {
     initializeSlider();
@@ -338,4 +341,3 @@ function setLanguage(language) {
     languageLabel.textContent = "العربية";
   }
 }
-
